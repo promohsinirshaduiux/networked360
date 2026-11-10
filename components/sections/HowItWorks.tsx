@@ -195,14 +195,13 @@ export default function HowItWorks() {
 
   return (
     <section ref={ref} id="how" className="relative overflow-hidden bg-paper-2 py-20 md:py-32">
-      <div aria-hidden className="absolute top-0 left-1/2 h-[480px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,#d9f1fa,transparent)] opacity-70" />
       <div className="container-x relative">
         <SectionHeading
           eyebrow="How it works"
           align="center"
           title={
             <>
-              Five to seven minutes. <em className="text-gradient">Then you decide.</em>
+              Five to seven minutes. <em className="text-ink">Then you decide.</em>
             </>
           }
           lead="No swiping, no endless messaging. Real conversations on a timer, private choices, and connections that only happen when you both want them."

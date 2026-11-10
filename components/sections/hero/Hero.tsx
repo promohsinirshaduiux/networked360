@@ -6,7 +6,6 @@ import { BadgeCheck, CalendarDays, EyeOff, MapPin } from 'lucide-react';
 import { ButtonLink } from '@/components/ui/Button';
 import { PEOPLE, ROUTES, UPCOMING } from '@/lib/content';
 import { gsap, useGSAP } from '@/lib/gsap';
-import MatchStage from './MatchStage';
 
 const TRUST = [
   { icon: BadgeCheck, t: 'Verified members' },
@@ -77,13 +76,13 @@ export default function Hero() {
   return (
     // 24px margin on every side; the top starts 24px below the floating navbar (16px offset + 64px bar + 24px)
     <section ref={ref} id="top" aria-label="Introduction" className="px-6 pt-[104px] pb-6">
-      <div className="relative isolate overflow-hidden rounded-[30px] bg-[#06222f] pt-12 pb-16 md:pt-16 md:pb-20">
+      <div className="relative isolate flex min-h-[80svh] flex-col justify-center overflow-hidden rounded-[30px] bg-[#06222f] py-12 md:py-16">
         {/* background photo, then a navy overlay that keeps white text above AA contrast (about 5.7:1 even over the brightest pixels) */}
-        <Image src="/images/scenes/cta-toast.jpg" alt="" fill priority sizes="(max-width: 1400px) 100vw, 1400px" className="-z-20 object-cover object-[62%_30%]" />
-        <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-[#04202d]/80 via-[#06222f]/70 to-[#06222f]/85" />
-        <div aria-hidden className="absolute inset-0 -z-10 opacity-[0.14] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:22px_22px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_30%,#000_10%,transparent_80%)]" />
+        <Image src="/images/scenes/hero-bg.png" alt="" fill priority sizes="(max-width: 1400px) 100vw, 1400px" className="-z-20 object-cover object-[50%_85%]" />
+        {/* the photo is already dark at the top where the headline sits, so the overlay only needs to be light */}
+        <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-[#04202d]/30 via-[#06222f]/50 to-[#06222f]/60" />
 
-      <div data-hero-copy className="container-x flex flex-col items-center text-center">
+      <div data-hero-copy className="container-x flex w-full flex-col items-center text-center">
         <div data-hero-pill>
           <NextRoom />
         </div>
@@ -136,8 +135,6 @@ export default function Hero() {
           ))}
         </div>
       </div>
-
-      <MatchStage />
       </div>
     </section>
   );

@@ -123,7 +123,7 @@ export default function UpcomingEvents() {
           eyebrow="Upcoming events"
           title={
             <>
-              Rooms opening <em className="text-gradient">near you.</em>
+              Rooms opening <em className="text-ink">near you.</em>
             </>
           }
           lead="A few featured rooms this month. New events open every week across New York, New Jersey and online."
