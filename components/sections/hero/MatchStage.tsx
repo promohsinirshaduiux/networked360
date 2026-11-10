@@ -46,8 +46,10 @@ export default function MatchStage() {
       const mm = gsap.matchMedia();
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.from(q('[data-arch]'), { yPercent: 40, opacity: 0, duration: 1.4, ease: 'expo.out', delay: 0.6, stagger: { each: 0.08, from: 'center' } });
-        gsap.from(q('[data-chip]'), { scale: 0.6, opacity: 0, duration: 0.9, ease: 'back.out(2)', delay: 1.4, stagger: 0.12 });
+        // Plays when the stage scrolls into view (it now sits below the hero, not above the fold)
+        const enter = { trigger: root.current, start: 'top 85%', once: true };
+        gsap.from(q('[data-arch]'), { yPercent: 40, opacity: 0, duration: 1.4, ease: 'expo.out', delay: 0.1, stagger: { each: 0.08, from: 'center' }, scrollTrigger: enter });
+        gsap.from(q('[data-chip]'), { scale: 0.6, opacity: 0, duration: 0.9, ease: 'back.out(2)', delay: 0.9, stagger: 0.12, scrollTrigger: enter });
         gsap.to(q('[data-chip]'), { y: -10, duration: 2.8, ease: 'sine.inOut', repeat: -1, yoyo: true, stagger: { each: 0.5, from: 'random' } });
         gsap.to(q('[data-ring]'), { rotate: (i) => (i % 2 ? -360 : 360), duration: (i) => 60 + i * 20, ease: 'none', repeat: -1 });
 

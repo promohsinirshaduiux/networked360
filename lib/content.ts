@@ -2,11 +2,11 @@ import type { LucideIcon } from 'lucide-react';
 import { Briefcase, Compass, Handshake, Heart, Scale, Smile, TrendingUp } from 'lucide-react';
 
 /*
- * Photos: free-license images from Freepik (magnific.com), stored in /public/images.
- * See README → Assets for the attribution note.
+ * Photos: AI-generated with Higgsfield (gpt_image_2_6), stored as original PNGs in /public/images.
+ * See README → Assets.
  */
-const person = (name: string) => `/images/people/${name}.jpg`;
-const scene = (name: string) => `/images/scenes/${name}.jpg`;
+const person = (name: string) => `/images/people/${name}.png`;
+const scene = (name: string) => `/images/scenes/${name}.png`;
 
 /** Every nav target stays on this page for now. Swap for real routes when those pages exist. */
 export const ROUTES = {

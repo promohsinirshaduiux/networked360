@@ -26,7 +26,7 @@ function Panel({ c, k, open }: { c: ExploreCategory; k: number; open: boolean })
 
       {/* top row */}
       <div className="absolute inset-x-4 top-4 flex items-start justify-between">
-        <span className="grid h-11 w-11 place-items-center rounded-full bg-white shadow-float" style={{ color: c.color }}>
+        <span className="grid aspect-square h-11 w-11 shrink-0 place-items-center rounded-full bg-white shadow-float" style={{ color: c.color }}>
           <Icon className="h-[18px] w-[18px]" />
         </span>
         <span className={cn('rounded-full bg-black/30 px-3 py-1.5 text-[0.75rem] font-medium tabular-nums text-white backdrop-blur-md transition-opacity duration-500', open ? 'opacity-100' : 'opacity-0')}>

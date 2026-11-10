@@ -43,9 +43,10 @@ Tested at 320, 360, 375, 600, 667 (landscape), 768 and 1024 px, with no horizont
   - `public/brand/icon-*.webp` come from "Red Logo.svg", re-centred so the mark sits exactly in the middle of the circle.
   - `public/brand/logo-full*.webp` are "Red Logo Name.png": the mark in #009fd8 and the "Networked360" wordmark in gray-900 (#111827), both recolors approved by the client; `icon-*.webp` are the round icon in the same blue.
   - `<LogoMark spin />` adds the quick 360° turn, pause and repeat.
-- **Photos:** free-license images from Freepik (magnific.com), in `public/images`.
-  - Portraits are cropped to 3:4. The originals are in `_archive/source-photos`.
-  - Freepik's free license **requires attribution**. The footer credit was removed at the client's request, so the site needs a Freepik Premium license, or the credit added back elsewhere, before launch.
+- **Photos:** AI-generated with Higgsfield (model `gpt_image_2_6`), saved as the original PNGs in `public/images` with no extra compression (`images.unoptimized` is on in `next.config.ts`).
+  - `people/` holds 3:4 portraits, `scenes/` holds the section, event and story photos, and `scenes/hero-bg.png` is the hero background.
+  - They replaced the earlier Freepik placeholder photos. `scenes/cta-toast.jpg` and `scenes/online-call.jpg` are unused Freepik leftovers and can be deleted.
+  - These are synthetic people, not real members. Check Higgsfield's terms for commercial use before launch.
 - **Company logos:** official SVGs from Wikimedia Commons in `public/logos`. They are trademarks of their owners. Confirm you have the right to show them before launch.
 
 ## Placeholder content to replace before launch

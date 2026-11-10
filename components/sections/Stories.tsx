@@ -59,7 +59,7 @@ export default function Stories() {
           eyebrow="Success stories"
           title={
             <>
-              Met in <em className="text-gradient">seven minutes.</em>
+              Met in <em className="text-ink">seven minutes.</em>
             </>
           }
           lead="Hires, co-founders, best friends and second dates — all from one short conversation."

@@ -4,10 +4,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    formats: ['image/avif', 'image/webp'],
+    // Serve the original files as-is: no resizing, no re-encoding, no quality loss
+    unoptimized: true,
     remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
-    deviceSizes: [390, 640, 828, 1080, 1280, 1600, 1920],
-    imageSizes: [64, 96, 128, 256, 384],
   },
   experimental: {
     optimizePackageImports: ['lucide-react', 'gsap'],

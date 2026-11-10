@@ -81,7 +81,7 @@ export default function Footer() {
           {/* brand statement */}
           <div className="col-span-2 grid content-start gap-5 md:col-span-1">
             <p className="max-w-[18ch] font-display font-bold text-[clamp(1.75rem,2.9vw,2.5rem)] leading-[1.1] tracking-[-0.03em] text-ink">
-              Real connections, <em className="text-gradient">seven minutes</em> at a time.
+              Real connections, <em className="text-ink">seven minutes</em> at a time.
             </p>
             <p className="max-w-[40ch] leading-relaxed text-ink-3">Speed networking for business, careers, friendship and dating — online and in person.</p>
             <p className="inline-flex items-center gap-2 text-[0.92rem] font-medium text-ink-2">

@@ -74,7 +74,7 @@ export default function Contact() {
             eyebrow="Contact us"
             title={
               <>
-                Let’s <em className="text-gradient">talk.</em>
+                Let’s <em className="text-ink">talk.</em>
               </>
             }
             lead="Questions about a room, hosting an event or partnering with us? A real person will get back to you."

@@ -187,7 +187,7 @@ export default function WhyNetworked() {
           eyebrow="Why Networked360"
           title={
             <>
-              Less scrolling. <em className="text-gradient">More real people.</em>
+              Less scrolling. <em className="text-ink">More real people.</em>
             </>
           }
           lead="Born from years of sold-out speed-dating evenings in New Jersey and New York, now for every part of life — careers, capital, friendship, love and expert advice."
