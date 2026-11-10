@@ -67,7 +67,7 @@ export default function FinalCTA() {
   return (
     <section ref={ref} id="join" className="px-2 py-6 sm:px-3 md:py-10">
       <div data-panel className="relative isolate overflow-hidden rounded-[40px] bg-brand text-white">
-        <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(60%_70%_at_15%_0%,#ec4a68_0%,transparent_60%),radial-gradient(60%_70%_at_90%_100%,#92102f_0%,transparent_60%)]" />
+        <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(60%_70%_at_15%_0%,#33b6e3_0%,transparent_60%),radial-gradient(60%_70%_at_90%_100%,#00668a_0%,transparent_60%)]" />
 
         {/* giant drifting outline type */}
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 flex flex-col justify-between overflow-hidden py-6 select-none">

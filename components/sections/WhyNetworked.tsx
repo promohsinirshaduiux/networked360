@@ -214,7 +214,7 @@ export default function WhyNetworked() {
 
           {/* handle */}
           <div className="pointer-events-none absolute inset-y-0 w-0" style={{ left: 'var(--split)' }}>
-            <span className="absolute inset-y-0 -left-px w-[2px] bg-white shadow-[0_0_0_1px_rgb(212_26_70/0.15)]" />
+            <span className="absolute inset-y-0 -left-px w-[2px] bg-white shadow-[0_0_0_1px_rgb(0_159_216/0.15)]" />
             <span className="absolute top-1/2 left-0 grid -translate-x-1/2 -translate-y-1/2 place-items-center">
               <span className="absolute h-[84px] w-[84px] rounded-full bg-white shadow-lift transition-transform duration-500 ease-[var(--ease-expo)] group-data-[dragging]/cmp:scale-110" />
               <LogoMark size={60} spin className="relative" />

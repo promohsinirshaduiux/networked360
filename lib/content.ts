@@ -75,12 +75,12 @@ export type ExploreCategory = {
 };
 
 export const EXPLORE: ExploreCategory[] = [
-  { id: 'business', name: 'Business', tagline: 'Partners, clients & collaborators', body: 'Meet founders, operators and buyers who came to do business.', sides: ['Founders', 'Partners & clients'], icon: Handshake, color: '#d41a46', tint: '#fef3f5', img: scene('business'), tags: ['Agencies', 'SaaS', 'Real estate'], next: 'Tue · Flatiron' },
-  { id: 'careers', name: 'Careers', tagline: 'Speed interviews', body: 'Eight interviews with hiring managers who are hiring right now.', sides: ['Candidates', 'Hiring teams'], icon: Briefcase, color: '#2563d9', tint: '#ebf2ff', img: scene('careers'), tags: ['Tech', 'Finance', 'Healthcare'], next: 'Wed · Online' },
+  { id: 'business', name: 'Business', tagline: 'Partners, clients & collaborators', body: 'Meet founders, operators and buyers who came to do business.', sides: ['Founders', 'Partners & clients'], icon: Handshake, color: '#009fd8', tint: '#f0f9fd', img: scene('business'), tags: ['Agencies', 'SaaS', 'Real estate'], next: 'Tue · Flatiron' },
+  { id: 'careers', name: 'Careers', tagline: 'Speed interviews', body: 'Eight interviews with hiring managers who are hiring right now.', sides: ['Candidates', 'Hiring teams'], icon: Briefcase, color: '#6a4fd8', tint: '#f0edfc', img: scene('careers'), tags: ['Tech', 'Finance', 'Healthcare'], next: 'Wed · Online' },
   { id: 'investors', name: 'Investors', tagline: 'Founders × capital', body: 'Pitch angels and funds matched to your stage and sector.', sides: ['Founders', 'Angels & VCs'], icon: TrendingUp, color: '#c97d08', tint: '#fff5e0', img: scene('investors'), tags: ['Pre-seed', 'Seed', 'Series A'], next: 'Tue · Flatiron' },
   { id: 'mentorship', name: 'Mentorship', tagline: 'Learn from people ahead of you', body: 'Rotate through seasoned operators. Keep the one who gets you.', sides: ['Mentees', 'Mentors'], icon: Compass, color: '#129b6f', tint: '#e8f7f0', img: scene('mentorship'), tags: ['Women in finance', 'First-time founders'], next: 'Wed · Midtown' },
   { id: 'friendship', name: 'Friendship', tagline: 'Find your people', body: 'Seven-minute hellos that turn into brunch plans.', sides: ['New friends', 'New friends'], icon: Smile, color: '#e0662a', tint: '#fff1ea', img: scene('friendship'), tags: ['New in town', '20s & 30s', 'Run clubs'], next: 'Fri · Hoboken' },
-  { id: 'dating', name: 'Dating', tagline: 'Chemistry you can’t swipe for', body: 'Verified singles, balanced rooms, venues worth dressing up for.', sides: ['Singles', 'Singles'], icon: Heart, color: '#b8143b', tint: '#fce3e8', img: scene('dating'), tags: ['20s & 30s', '40s & 50s', 'LGBTQ+'], next: 'Thu · Woodbridge' },
+  { id: 'dating', name: 'Dating', tagline: 'Chemistry you can’t swipe for', body: 'Verified singles, balanced rooms, venues worth dressing up for.', sides: ['Singles', 'Singles'], icon: Heart, color: '#d6336c', tint: '#fde7f0', img: scene('dating'), tags: ['20s & 30s', '40s & 50s', 'LGBTQ+'], next: 'Thu · Woodbridge' },
   { id: 'professionals', name: 'Professionals', tagline: 'Lawyers, doctors, coaches & more', body: 'Meet lawyers, doctors and coaches before you need one.', sides: ['Guests', 'Professionals'], icon: Scale, color: '#6b2a63', tint: '#f7ecf5', img: scene('professionals'), tags: ['Lawyers', 'Doctors', 'Therapists'], next: 'Mon · Online' },
 ];
 
@@ -121,8 +121,8 @@ export type EventItem = {
 /** Three featured rooms — sample data until the events feed is connected. */
 export const UPCOMING: EventItem[] = [
   { id: 'founders-angels', category: 'Investors', color: '#c97d08', title: 'Founders × Angels', blurb: 'Pre-seed and seed founders meet active angels.', format: 'In person', place: 'Flatiron, NYC', date: '2026-11-17', time: '6:30 PM', price: '$65', rounds: 8, mins: 6, seatsLeft: 9, capacity: 32, img: scene('event-founders') },
-  { id: 'interviews-tech', category: 'Careers', color: '#2563d9', title: 'Speed Interviews: Tech', blurb: 'Eight live interviews with teams hiring now.', format: 'Online', place: 'Live video rooms', date: '2026-11-18', time: '12:00 PM ET', price: 'Free', rounds: 8, mins: 7, seatsLeft: 41, capacity: 120, img: scene('event-online') },
-  { id: 'woodbridge-dating', category: 'Dating', color: '#b8143b', title: 'Singles, 20s & 30s', blurb: 'Verified single professionals in a balanced room.', format: 'In person', place: 'Woodbridge, NJ', date: '2026-11-19', time: '7:30 PM', price: '$45', rounds: 10, mins: 7, seatsLeft: 6, capacity: 24, img: scene('event-dating') },
+  { id: 'interviews-tech', category: 'Careers', color: '#6a4fd8', title: 'Speed Interviews: Tech', blurb: 'Eight live interviews with teams hiring now.', format: 'Online', place: 'Live video rooms', date: '2026-11-18', time: '12:00 PM ET', price: 'Free', rounds: 8, mins: 7, seatsLeft: 41, capacity: 120, img: scene('event-online') },
+  { id: 'woodbridge-dating', category: 'Dating', color: '#d6336c', title: 'Singles, 20s & 30s', blurb: 'Verified single professionals in a balanced room.', format: 'In person', place: 'Woodbridge, NJ', date: '2026-11-19', time: '7:30 PM', price: '$45', rounds: 10, mins: 7, seatsLeft: 6, capacity: 24, img: scene('event-dating') },
 ];
 
 /** Illustrative stories for the prototype — replace with real member stories. */

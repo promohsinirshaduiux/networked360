@@ -125,7 +125,7 @@ export default function Footer() {
         {/* full logo, edge to edge of the container — sized by width, so it is never cropped */}
         <div className="mt-14 md:mt-20">
           <Image
-            src="/brand/logo-full-red.webp"
+            src="/brand/logo-full.webp"
             alt="Networked360"
             width={2400}
             height={352}

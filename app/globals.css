@@ -1,20 +1,20 @@
 @import 'tailwindcss';
 
 /* ------------------------------------------------------------------ */
-/* Design tokens — brand red #D41A46 on warm light neutrals            */
+/* Design tokens — brand red #009fd8 on warm light neutrals            */
 /* ------------------------------------------------------------------ */
 @theme {
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-sans: var(--font-dmsans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --color-brand: #d41a46;
-  --color-brand-600: #b8143b;
-  --color-brand-700: #92102f;
-  --color-brand-400: #e64a6c;
-  --color-brand-300: #f08aa0;
-  --color-brand-200: #f7c4cf;
-  --color-brand-100: #fce3e8;
-  --color-brand-50: #fef3f5;
+  --color-brand: #009fd8;
+  --color-brand-600: #0082b0;
+  --color-brand-700: #00668a;
+  --color-brand-400: #33b3e0;
+  --color-brand-300: #7fcfeb;
+  --color-brand-200: #b3e2f4;
+  --color-brand-100: #d9f1fa;
+  --color-brand-50: #f0f9fd;
 
   --color-paper: #fcfaf8;
   --color-paper-2: #f6f1ee;
@@ -39,9 +39,9 @@
   --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
 
   --shadow-soft: 0 1px 2px rgb(23 20 26 / 0.04), 0 10px 30px -12px rgb(23 20 26 / 0.12);
-  --shadow-lift: 0 2px 6px rgb(23 20 26 / 0.04), 0 34px 70px -30px rgb(146 16 47 / 0.32);
+  --shadow-lift: 0 2px 6px rgb(23 20 26 / 0.04), 0 34px 70px -30px rgb(0 102 138 / 0.32);
   --shadow-float: 0 1px 1px rgb(23 20 26 / 0.04), 0 18px 40px -16px rgb(23 20 26 / 0.24);
-  --shadow-brand: 0 14px 34px -12px rgb(212 26 70 / 0.6);
+  --shadow-brand: 0 14px 34px -12px rgb(0 159 216 / 0.6);
 
   --animate-marquee: marquee 38s linear infinite;
   --animate-marquee-rev: marquee-rev 42s linear infinite;
@@ -104,7 +104,7 @@
 }
 
 @utility text-gradient {
-  background: linear-gradient(100deg, #b8143b 0%, #d41a46 40%, #f0566f 100%);
+  background: linear-gradient(100deg, #0082b0 0%, #009fd8 40%, #4fc3ec 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -112,7 +112,7 @@
 }
 
 @utility bg-brand-gradient {
-  background: linear-gradient(120deg, #b8143b 0%, #d41a46 45%, #ec4a68 100%);
+  background: linear-gradient(120deg, #0082b0 0%, #009fd8 45%, #33b6e3 100%);
 }
 
 @utility grain {

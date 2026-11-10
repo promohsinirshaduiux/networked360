@@ -4,7 +4,7 @@ import { cn } from '@/lib/cn';
 /*
  * Brand assets built from the client's files (see brand-source/):
  *  - Icon: "Red Logo.svg", the round red mark, re-centred so the white mark sits exactly in the middle.
- *  - Full logo: "Red Logo Name.png" (mark + "Networked360"), recoloured to the brand red #D41A46.
+ *  - Full logo: "Red Logo Name.png" (mark + "Networked360"), recoloured to the brand blue #009fd8.
  */
 const SIZES = [128, 256, 512, 1024] as const;
 const pick = (px: number) => SIZES.find((s) => s >= px * 2) ?? 1024;
@@ -37,12 +37,12 @@ export function LogoMark({ size = 36, spin, priority, className }: MarkProps) {
 /** Trimmed full logo, width / height of the artwork. */
 const FULL_RATIO = 6.8218;
 
-/** The full logo (mark + name) in brand red. Sized by height; width follows the artwork's ratio so it never crops. */
+/** The full logo (mark + name) in brand blue. Sized by height; width follows the artwork's ratio so it never crops. */
 export function FullLogo({ height = 32, priority, className }: { height?: number; priority?: boolean; className?: string }) {
   const width = Math.round(height * FULL_RATIO);
   return (
     <Image
-      src={width > 600 ? '/brand/logo-full-red.webp' : '/brand/logo-full-red-1200.webp'}
+      src={width > 600 ? '/brand/logo-full.webp' : '/brand/logo-full-1200.webp'}
       alt="Networked360"
       width={width}
       height={height}

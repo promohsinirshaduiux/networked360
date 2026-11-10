@@ -2,7 +2,7 @@
 
 A light-mode landing page for Networked360, the speed-networking platform.
 - **Stack:** Next.js 16 (App Router), Tailwind CSS 4, GSAP 3 (ScrollTrigger, SplitText), Lenis smooth scroll and **Lucide** icons.
-- **Brand:** color #D41A46. Headings use Fraunces and body text uses DM Sans.
+- **Brand:** color #009fd8 (`--color-brand` in `app/globals.css`; shades 50–700 sit beside it). Headings use Fraunces and body text uses DM Sans.
 
 ## Run
 ```bash
@@ -32,7 +32,7 @@ All copy and data lives in `lib/content.ts`. Navigation only scrolls within this
 ## Assets
 - **Logo:** sources are in `brand-source/`.
   - `public/brand/icon-*.webp` come from "Red Logo.svg", re-centred so the mark sits exactly in the middle of the circle.
-  - `public/brand/logo-full-red*.webp` are "Red Logo Name.png" recoloured to #D41A46, which the client approved.
+  - `public/brand/logo-full*.webp` are "Red Logo Name.png" recoloured to #009fd8, which the client approved; `icon-*.webp` are the round icon in the same blue.
   - `<LogoMark spin />` adds the quick 360° turn, pause and repeat.
 - **Photos:** free-license images from Freepik (magnific.com), in `public/images`.
   - Portraits are cropped to 3:4. The originals are in `_archive/source-photos`.

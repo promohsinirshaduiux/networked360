@@ -82,12 +82,12 @@ export default function MatchStage() {
           .fromTo(q('[data-heart]'), { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(2)' })
           .fromTo(q('[data-yes]'), { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'back.out(2)', stagger: 0.12 }, '<')
           .fromTo(q('[data-line]'), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: 'expo.out' }, '<0.2')
-          .fromTo(q('[data-pair]'), { boxShadow: '0 0 0 0px rgba(212,26,70,0)' }, { boxShadow: '0 0 0 5px rgba(212,26,70,0.9)', duration: 0.4 }, '<')
+          .fromTo(q('[data-pair]'), { boxShadow: '0 0 0 0px rgba(0,159,216,0)' }, { boxShadow: '0 0 0 5px rgba(0,159,216,0.9)', duration: 0.4 }, '<')
           .fromTo(q('[data-badge]'), { y: 20, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.8)' }, '<0.1')
           .to({}, { duration: 1.6 })
           .to(q('[data-badge], [data-yes], [data-heart]'), { opacity: 0, y: 10, duration: 0.4, ease: 'power2.in' })
           .to(q('[data-line]'), { scaleX: 0, duration: 0.4 }, '<')
-          .to(q('[data-pair]'), { boxShadow: '0 0 0 0px rgba(212,26,70,0)', duration: 0.4 }, '<')
+          .to(q('[data-pair]'), { boxShadow: '0 0 0 0px rgba(0,159,216,0)', duration: 0.4 }, '<')
           .add(() => {
             const prev = pair;
             pair = (pair + 1) % PAIRS.length;
@@ -125,7 +125,7 @@ export default function MatchStage() {
         <div data-ring className="absolute inset-0 rounded-full border border-dashed border-brand-200" />
         <div data-ring className="absolute inset-[12%] rounded-full border border-brand-100" />
         <div data-ring className="absolute inset-[24%] rounded-full border border-dashed border-brand-200" />
-        <div className="absolute inset-[34%] rounded-full bg-[radial-gradient(circle,#fce3e8,transparent_70%)]" />
+        <div className="absolute inset-[34%] rounded-full bg-[radial-gradient(circle,#d9f1fa,transparent_70%)]" />
       </div>
 
       {CHIPS.map(({ icon: Icon, t, cls }) => (
@@ -151,8 +151,8 @@ export default function MatchStage() {
             <span data-line className="absolute top-1/2 left-full h-[2px] w-[clamp(10px,1.6vw,22px)] origin-left bg-brand" style={{ transform: 'scaleX(0)' }} />
             <div data-clock className="absolute inset-0 grid place-items-center rounded-full bg-white shadow-float">
               <svg viewBox="0 0 80 80" className="absolute inset-1 -rotate-90">
-                <circle cx="40" cy="40" r={R} fill="none" stroke="#fce3e8" strokeWidth="5" />
-                <circle data-timer cx="40" cy="40" r={R} fill="none" stroke="#d41a46" strokeWidth="5" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={0} />
+                <circle cx="40" cy="40" r={R} fill="none" stroke="#d9f1fa" strokeWidth="5" />
+                <circle data-timer cx="40" cy="40" r={R} fill="none" stroke="#009fd8" strokeWidth="5" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={0} />
               </svg>
               <span className="relative text-center leading-none">
                 <span data-time className="block text-[1.05rem] font-semibold tabular-nums text-ink md:text-[1.15rem]">7:00</span>

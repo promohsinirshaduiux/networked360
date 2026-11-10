@@ -61,8 +61,8 @@ function MeetVisual() {
       ))}
       <div className="relative order-2 grid h-[76px] w-[76px] shrink-0 place-items-center">
         <svg viewBox="0 0 72 72" className="absolute inset-0 -rotate-90">
-          <circle cx="36" cy="36" r={R} fill="none" stroke="#fce3e8" strokeWidth="6" />
-          <circle data-ring cx="36" cy="36" r={R} fill="none" stroke="#d41a46" strokeWidth="6" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={0} />
+          <circle cx="36" cy="36" r={R} fill="none" stroke="#d9f1fa" strokeWidth="6" />
+          <circle data-ring cx="36" cy="36" r={R} fill="none" stroke="#009fd8" strokeWidth="6" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={0} />
         </svg>
         <span data-clock className="relative text-[0.95rem] font-semibold tabular-nums text-ink">7:00</span>
       </div>
@@ -159,7 +159,7 @@ export default function HowItWorks() {
               const tl = gsap.timeline();
               tl.to(el.querySelector('[data-card]'), { opacity: 1, x: 0, duration: 1.1, ease: 'expo.out' })
                 .to(el.querySelector('[data-num]'), { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out' }, 0.1)
-                .to(el.querySelector('[data-dot]'), { scale: 1, backgroundColor: '#d41a46', duration: 0.5, ease: 'back.out(2)' }, 0.1);
+                .to(el.querySelector('[data-dot]'), { scale: 1, backgroundColor: '#009fd8', duration: 0.5, ease: 'back.out(2)' }, 0.1);
               // step-specific micro-animations
               if (k === 0) {
                 tl.from(el.querySelectorAll('[data-pick]'), { y: 10, opacity: 0, stagger: 0.06, duration: 0.5 }, 0.3).from(el.querySelector('[data-booked]'), { scale: 0.5, opacity: 0, duration: 0.6, ease: 'back.out(2)' }, 0.8);
@@ -195,7 +195,7 @@ export default function HowItWorks() {
 
   return (
     <section ref={ref} id="how" className="relative overflow-hidden bg-paper-2 py-20 md:py-32">
-      <div aria-hidden className="absolute top-0 left-1/2 h-[480px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,#fce3e8,transparent)] opacity-70" />
+      <div aria-hidden className="absolute top-0 left-1/2 h-[480px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,#d9f1fa,transparent)] opacity-70" />
       <div className="container-x relative">
         <SectionHeading
           eyebrow="How it works"
@@ -254,7 +254,7 @@ export default function HowItWorks() {
                   data-num
                   aria-hidden
                   className={cn(
-                    'hidden self-center font-display text-[clamp(7rem,12vw,11rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(212_26_70/0.35)] md:row-start-1 md:block',
+                    'hidden self-center font-display text-[clamp(7rem,12vw,11rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(0_159_216/0.35)] md:row-start-1 md:block',
                     right ? 'md:col-start-1 md:justify-self-end md:pr-10' : 'md:col-start-3 md:pl-10',
                   )}
                 >

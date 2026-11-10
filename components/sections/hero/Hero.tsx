@@ -77,7 +77,7 @@ export default function Hero() {
 
   return (
     <section ref={ref} id="top" aria-label="Introduction" className="grain relative isolate overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20">
-      <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,#fce3e8_0%,transparent_70%),radial-gradient(40%_40%_at_85%_30%,#fff1ea_0%,transparent_70%),radial-gradient(40%_40%_at_10%_40%,#fef3f5_0%,transparent_70%)]" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,#d9f1fa_0%,transparent_70%),radial-gradient(40%_40%_at_85%_30%,#fff1ea_0%,transparent_70%),radial-gradient(40%_40%_at_10%_40%,#f0f9fd_0%,transparent_70%)]" />
       <div aria-hidden className="dot-grid absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_30%,#000_10%,transparent_75%)]" />
 
       <div data-hero-copy className="container-x flex flex-col items-center text-center">
@@ -101,7 +101,7 @@ export default function Hero() {
               <span className="relative">
                 <em className="text-gradient font-[320] italic">seven minutes</em>
                 <svg aria-hidden viewBox="0 0 300 20" preserveAspectRatio="none" className="absolute -bottom-[0.06em] left-0 h-[0.18em] w-full overflow-visible">
-                  <path data-underline pathLength={1} d="M3 14 C 60 4, 140 4, 200 10 S 280 16, 297 6" fill="none" stroke="#d41a46" strokeWidth="5" strokeLinecap="round" strokeDasharray="1" />
+                  <path data-underline pathLength={1} d="M3 14 C 60 4, 140 4, 200 10 S 280 16, 297 6" fill="none" stroke="#009fd8" strokeWidth="5" strokeLinecap="round" strokeDasharray="1" />
                 </svg>
               </span>
             </span>

@@ -12,7 +12,7 @@ const base =
 const sweep = 'after:absolute after:inset-0 after:-z-10 after:translate-y-full after:rounded-full after:transition-transform after:duration-500 after:ease-[var(--ease-expo)] hover:after:translate-y-0';
 
 const variants: Record<Variant, string> = {
-  brand: cn('bg-brand text-white shadow-brand after:bg-brand-700 hover:shadow-[0_18px_40px_-12px_rgb(212_26_70/0.7)]', sweep),
+  brand: cn('bg-brand text-white shadow-brand after:bg-brand-700 hover:shadow-[0_18px_40px_-12px_rgb(0_159_216/0.7)]', sweep),
   dark: cn('bg-ink text-white shadow-[0_10px_30px_-12px_rgb(23_20_26/0.55)] after:bg-brand', sweep),
   outline: 'border border-line-2 bg-white/70 text-ink backdrop-blur hover:border-brand hover:text-brand',
   'outline-light': cn('border border-white/45 text-white after:bg-white hover:text-brand', sweep),

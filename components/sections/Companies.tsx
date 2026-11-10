@@ -123,7 +123,7 @@ export default function Companies() {
         <div data-stage className="relative mx-auto hidden aspect-square w-full max-w-[660px] lg:block">
           <div className="absolute inset-[6%] rounded-full border border-dashed border-brand-200" />
           <div className="absolute inset-[24%] rounded-full border border-line-2" />
-          <div className="absolute inset-[36%] rounded-full bg-[radial-gradient(circle,#fce3e8,transparent_70%)]" />
+          <div className="absolute inset-[36%] rounded-full bg-[radial-gradient(circle,#d9f1fa,transparent_70%)]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <span className="absolute inset-0 animate-ping-slow rounded-full bg-brand/20" />
             <LogoMark size={128} spin className="relative shadow-brand" />

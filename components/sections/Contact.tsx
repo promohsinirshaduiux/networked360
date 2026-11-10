@@ -17,7 +17,7 @@ const DETAILS = [
 
 const fieldCls = (invalid?: boolean) =>
   cn(
-    'peer w-full rounded-2xl border bg-paper/70 px-4 pt-6 pb-2.5 text-[0.98rem] text-ink outline-none transition-[border-color,background-color,box-shadow] duration-300 placeholder:text-transparent hover:border-ink/25 focus:bg-white focus:shadow-[0_0_0_4px_rgb(212_26_70/0.1)]',
+    'peer w-full rounded-2xl border bg-paper/70 px-4 pt-6 pb-2.5 text-[0.98rem] text-ink outline-none transition-[border-color,background-color,box-shadow] duration-300 placeholder:text-transparent hover:border-ink/25 focus:bg-white focus:shadow-[0_0_0_4px_rgb(0_159_216/0.1)]',
     invalid ? 'border-brand bg-brand-50/40' : 'border-line-2 focus:border-brand',
   );
 const labelCls =
@@ -67,7 +67,7 @@ export default function Contact() {
 
   return (
     <section ref={ref} id="contact" className="relative py-20 md:py-32">
-      <div aria-hidden className="absolute top-24 -left-40 h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,#fce3e8,transparent)] opacity-80" />
+      <div aria-hidden className="absolute top-24 -left-40 h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,#d9f1fa,transparent)] opacity-80" />
       <div className="container-x relative grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div className="lg:sticky lg:top-28">
           <SectionHeading
