@@ -48,8 +48,7 @@ function NextRoom() {
 function LogoMarquee() {
   return (
     <div data-hero-fade className="mt-10 w-full max-w-[1000px] md:mt-12">
-      <p className="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-white/75">People from the world’s leading companies</p>
-      <div className="relative mt-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">
+      <div role="group" aria-label="People from the world’s leading companies" className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">
         <div className="flex w-max animate-marquee [animation-duration:90s] hover:[animation-play-state:paused] motion-reduce:animate-none">
           {[0, 1].map((copy) => (
             <ul key={copy} aria-hidden={copy === 1 || undefined} className="flex shrink-0 items-center gap-12 pr-12 md:gap-16 md:pr-16">
