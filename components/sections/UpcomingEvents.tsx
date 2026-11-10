@@ -46,7 +46,7 @@ function Poster({ e }: { e: EventItem }) {
       </div>
 
       {/* bottom: glass panel */}
-      <div className="rounded-[24px] border border-white/60 bg-white/80 p-5 text-ink shadow-float ring-1 ring-black/[0.03] backdrop-blur-2xl backdrop-saturate-150">
+      <div className="rounded-[24px] bg-white p-5 text-ink shadow-float ring-1 ring-black/[0.03]">
         <span className="inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em]" style={{ color: e.color }}>
           <span className="h-1.5 w-1.5 rounded-full" style={{ background: e.color }} /> {e.category}
         </span>
@@ -133,7 +133,7 @@ export default function UpcomingEvents() {
             </ButtonLink>
           }
         />
-        <div data-posters className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div data-posters className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {UPCOMING.map((e) => (
             <Poster key={e.id} e={e} />
           ))}
