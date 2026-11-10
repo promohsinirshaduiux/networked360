@@ -262,20 +262,20 @@ export default function WhyNetworked() {
         {/* Pillars — four cards, four different treatments */}
         <div data-pillars className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.2fr]">
           {/* 1 — red, timer */}
-          <div data-pillar className="relative flex min-h-[190px] flex-col justify-between gap-6 overflow-hidden rounded-[28px] bg-brand p-6 sm:min-h-[230px] text-white shadow-brand">
+          <div data-pillar className="relative flex min-h-[190px] flex-col justify-between gap-6 overflow-hidden rounded-[28px] border border-line bg-white p-6 sm:min-h-[230px] shadow-soft">
             <div className="flex items-start justify-between">
-              <span className="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-white/75">Per conversation</span>
+              <span className="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-ink-3">Per conversation</span>
               <svg viewBox="0 0 64 64" className="h-16 w-16 -rotate-90" aria-hidden>
-                <circle cx="32" cy="32" r="26" fill="none" stroke="rgb(255 255 255 / 0.2)" strokeWidth="6" />
-                <circle cx="32" cy="32" r="26" fill="none" stroke="#fff" strokeWidth="6" strokeLinecap="round" strokeDasharray="163.4" strokeDashoffset="46" />
+                <circle cx="32" cy="32" r="26" fill="none" stroke="#d9f1fa" strokeWidth="6" />
+                <circle cx="32" cy="32" r="26" fill="none" stroke="#0082b0" strokeWidth="6" strokeLinecap="round" strokeDasharray="163.4" strokeDashoffset="46" />
               </svg>
             </div>
             <div>
-              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em]">
+              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em] text-ink">
                 5–<span data-count="7">7</span>
-                <span className="ml-1 font-sans text-[0.32em] font-medium tracking-normal text-white/80">min</span>
+                <span className="ml-1 font-sans text-[0.32em] font-medium tracking-normal text-ink-3">min</span>
               </p>
-              <p className="mt-2 text-[0.92rem] text-white/80">Long enough to tell. Short enough to keep it light.</p>
+              <p className="mt-2 text-[0.92rem] text-ink-3">Long enough to tell. Short enough to keep it light.</p>
             </div>
           </div>
 
@@ -287,7 +287,7 @@ export default function WhyNetworked() {
                   <Image src={p.img} alt="" fill sizes="40px" className="object-cover" />
                 </span>
               ))}
-              <span className="relative grid h-10 w-10 place-items-center rounded-full border-[3px] border-white bg-brand-50 text-[0.75rem] font-semibold text-brand">+5</span>
+              <span className="relative grid h-10 w-10 place-items-center rounded-full border-[3px] border-white bg-brand-50 text-[0.75rem] font-semibold text-brand-700">+5</span>
             </div>
             <div>
               <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em] text-ink">
@@ -298,25 +298,25 @@ export default function WhyNetworked() {
           </div>
 
           {/* 3 — dark, privacy */}
-          <div data-pillar className="relative flex min-h-[190px] flex-col justify-between gap-6 overflow-hidden rounded-[28px] bg-ink p-6 sm:min-h-[230px] text-white">
-            <div aria-hidden className="absolute -right-10 -bottom-12 h-44 w-44 rounded-full border-[18px] border-white/[0.04]" />
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-white/10 text-brand-300">
+          <div data-pillar className="relative flex min-h-[190px] flex-col justify-between gap-6 overflow-hidden rounded-[28px] border border-line bg-white p-6 sm:min-h-[230px] shadow-soft">
+            <div aria-hidden className="absolute -right-10 -bottom-12 h-44 w-44 rounded-full border-[18px] border-brand-50" />
+            <span className="grid h-11 w-11 place-items-center rounded-full bg-brand-50 text-brand-700">
               <Lock className="h-5 w-5" />
             </span>
             <div className="relative">
-              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em]">0</p>
-              <p className="mt-2 text-[0.92rem] text-white/70">details shared without a mutual yes</p>
+              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em] text-ink">0</p>
+              <p className="mt-2 text-[0.92rem] text-ink-3">details shared without a mutual yes</p>
             </div>
           </div>
 
-          {/* 4 — tinted, formats */}
-          <div data-pillar className="flex min-h-[190px] flex-col justify-between gap-6 rounded-[28px] border border-brand-100 bg-brand-50 p-6 sm:min-h-[230px]">
-            <div className="inline-flex w-fit rounded-full border border-brand-100 bg-white p-1 text-[0.8rem] font-semibold shadow-soft">
+          {/* 4 — white, formats */}
+          <div data-pillar className="flex min-h-[190px] flex-col justify-between gap-6 rounded-[28px] border border-line bg-white p-6 sm:min-h-[230px] shadow-soft">
+            <div className="inline-flex w-fit rounded-full border border-line-2 bg-white p-1 text-[0.8rem] font-semibold shadow-soft">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-white">
                 <MapPin className="h-3.5 w-3.5" /> In person
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 text-ink-2">
-                <Video className="h-3.5 w-3.5 text-brand" /> Online
+                <Video className="h-3.5 w-3.5 text-brand-700" /> Online
               </span>
             </div>
             <div>

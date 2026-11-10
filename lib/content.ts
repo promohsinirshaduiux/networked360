@@ -118,11 +118,10 @@ export type EventItem = {
   img: string;
 };
 
-/** Three featured rooms — sample data until the events feed is connected. */
+/** Two featured rooms — sample data until the events feed is connected. */
 export const UPCOMING: EventItem[] = [
   { id: 'founders-angels', category: 'Investors', color: '#c97d08', title: 'Founders × Angels', blurb: 'Pre-seed and seed founders meet active angels.', format: 'In person', place: 'Flatiron, NYC', date: '2026-11-17', time: '6:30 PM', price: '$65', rounds: 8, mins: 6, seatsLeft: 9, capacity: 32, img: scene('event-founders') },
   { id: 'interviews-tech', category: 'Careers', color: '#6a4fd8', title: 'Speed Interviews: Tech', blurb: 'Eight live interviews with teams hiring now.', format: 'Online', place: 'Live video rooms', date: '2026-11-18', time: '12:00 PM ET', price: 'Free', rounds: 8, mins: 7, seatsLeft: 41, capacity: 120, img: scene('event-online') },
-  { id: 'woodbridge-dating', category: 'Dating', color: '#d6336c', title: 'Singles, 20s & 30s', blurb: 'Verified single professionals in a balanced room.', format: 'In person', place: 'Woodbridge, NJ', date: '2026-11-19', time: '7:30 PM', price: '$45', rounds: 10, mins: 7, seatsLeft: 6, capacity: 24, img: scene('event-dating') },
 ];
 
 /** Illustrative stories for the prototype — replace with real member stories. */
