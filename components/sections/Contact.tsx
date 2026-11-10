@@ -17,11 +17,11 @@ const DETAILS = [
 
 const fieldCls = (invalid?: boolean) =>
   cn(
-    'peer w-full rounded-2xl border bg-paper/70 px-4 pt-6 pb-2.5 text-[0.98rem] text-ink outline-none transition-[border-color,background-color,box-shadow] duration-300 placeholder:text-transparent hover:border-ink/25 focus:bg-white focus:shadow-[0_0_0_4px_rgb(0_159_216/0.1)]',
+    'peer w-full rounded-2xl border bg-paper/70 px-4 pt-6 pb-2.5 text-base text-ink outline-none transition-[border-color,background-color,box-shadow] duration-300 placeholder:text-transparent hover:border-ink/25 focus:bg-white focus:shadow-[0_0_0_4px_rgb(0_159_216/0.1)]',
     invalid ? 'border-brand bg-brand-50/40' : 'border-line-2 focus:border-brand',
   );
 const labelCls =
-  'pointer-events-none absolute top-2 left-4 text-[0.72rem] font-semibold text-ink-4 transition-all duration-300 peer-placeholder-shown:top-[1.05rem] peer-placeholder-shown:text-[0.95rem] peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-[0.72rem] peer-focus:font-semibold peer-focus:text-brand';
+  'pointer-events-none absolute top-2 left-4 text-[0.75rem] font-semibold text-ink-4 transition-all duration-300 peer-placeholder-shown:top-[1.05rem] peer-placeholder-shown:text-[0.95rem] peer-placeholder-shown:font-normal peer-focus:top-2 peer-focus:text-[0.75rem] peer-focus:font-semibold peer-focus:text-brand';
 
 function Field({ id, label, type = 'text', textarea, value, onChange, invalid }: { id: string; label: string; type?: string; textarea?: boolean; value: string; onChange: (v: string) => void; invalid?: boolean }) {
   return (
@@ -88,7 +88,7 @@ export default function Contact() {
                     <Icon className="h-[18px] w-[18px]" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-ink-4">{label}</span>
+                    <span className="block text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-ink-4">{label}</span>
                     <span className="block truncate text-[1rem] font-medium text-ink">{value}</span>
                   </span>
                   {href && <ArrowUpRight className="h-4 w-4 text-ink-4 transition-colors group-hover:text-brand" />}
@@ -144,7 +144,7 @@ export default function Contact() {
                       <option key={t}>{t}</option>
                     ))}
                   </select>
-                  <span className="pointer-events-none absolute top-2 left-4 text-[0.72rem] font-semibold text-ink-4 peer-focus:text-brand">Topic</span>
+                  <span className="pointer-events-none absolute top-2 left-4 text-[0.75rem] font-semibold text-ink-4 peer-focus:text-brand">Topic</span>
                   <ChevronDown className="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2 text-ink-3" />
                 </label>
 

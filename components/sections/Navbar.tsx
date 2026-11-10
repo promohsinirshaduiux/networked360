@@ -81,7 +81,7 @@ export default function Navbar() {
   return (
     <>
       <header ref={headerRef} className={cn('fixed inset-x-0 top-0 z-50 transition-transform duration-700 ease-[var(--ease-expo)]', hidden && !open ? '-translate-y-[120%]' : 'translate-y-0')}>
-        <div className="container-x pt-3 md:pt-4">
+        <div className="container-x pt-[max(0.75rem,env(safe-area-inset-top))] md:pt-4">
           <nav
             aria-label="Primary"
             className={cn(
@@ -107,7 +107,7 @@ export default function Navbar() {
                       onFocus={() => setHover(l.id)}
                       onBlur={() => setHover(null)}
                       aria-current={active === l.id ? 'true' : undefined}
-                      className={cn('relative z-10 inline-flex rounded-full px-5 py-2 text-[0.93rem] font-medium transition-colors duration-300', lit ? 'text-white' : 'text-ink-2')}
+                      className={cn('tap-44 relative z-10 inline-flex items-center rounded-full px-5 py-2 text-[0.93rem] font-medium transition-colors duration-300', lit ? 'text-white' : 'text-ink-2')}
                     >
                       {l.label}
                     </a>
@@ -117,7 +117,7 @@ export default function Navbar() {
             </ul>
 
             <div className="flex items-center gap-1.5 justify-self-end">
-              <a href={ROUTES.login} className="hidden items-center gap-1.5 rounded-full px-4 py-2 text-[0.93rem] font-medium text-ink-2 transition-colors hover:text-brand md:inline-flex">
+              <a href={ROUTES.login} className="tap-44 hidden items-center gap-1.5 rounded-full px-4 py-2 text-[0.93rem] font-medium text-ink-2 transition-colors hover:text-brand md:inline-flex">
                 <LogIn className="h-4 w-4" /> Login
               </a>
               <span className="hidden sm:inline-flex">
@@ -146,8 +146,9 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         ref={menuRef}
+        data-lenis-prevent
         className={cn(
-          'fixed inset-0 z-40 flex flex-col justify-between bg-paper/96 px-4 pt-28 pb-8 backdrop-blur-2xl transition-[clip-path,visibility] duration-700 ease-[var(--ease-expo)] sm:px-8 lg:hidden',
+          'fixed inset-x-0 top-0 z-40 flex h-dvh flex-col justify-between gap-8 overflow-y-auto overscroll-contain bg-paper/96 px-[var(--gutter)] pt-24 pb-[max(2rem,env(safe-area-inset-bottom))] backdrop-blur-2xl transition-[clip-path,visibility] duration-700 ease-[var(--ease-expo)] lg:hidden',
           open ? 'visible [clip-path:circle(150%_at_calc(100%-40px)_44px)]' : 'invisible [clip-path:circle(0%_at_calc(100%-40px)_44px)]',
         )}
       >

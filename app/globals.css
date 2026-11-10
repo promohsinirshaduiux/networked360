@@ -72,7 +72,11 @@
 /* Base                                                                */
 /* ------------------------------------------------------------------ */
 @layer base {
-  html { -webkit-text-size-adjust: 100%; }
+  :root {
+    /* One horizontal gutter for the whole site: fluid, and never under a notch in landscape */
+    --gutter: max(clamp(16px, 4vw, 40px), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
+  }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
   body {
     background: var(--color-paper);
     color: var(--color-ink);
@@ -85,6 +89,19 @@
   ::selection { background: var(--color-brand); color: #fff; }
   :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; border-radius: 8px; }
   button { cursor: pointer; }
+
+  /* Touch: no 300ms tap delay or double-tap zoom, no grey tap flash */
+  a, button, summary, label, select, [role='button'], [role='radio'], [role='slider'] { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+
+  /* iOS Safari zooms the page when a focused field is under 16px */
+  input, select, textarea { font-size: max(16px, 1em); }
+
+  /* Better line breaks: balanced headings, no one-word last lines in paragraphs */
+  h1, h2, h3, blockquote { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  /* Long words and emails must never push the layout wider */
+  h1, h2, h3, p, li, a { overflow-wrap: break-word; }
 }
 
 /* ------------------------------------------------------------------ */
@@ -94,7 +111,7 @@
   width: 100%;
   max-width: 1320px;
   margin-inline: auto;
-  padding-inline: clamp(16px, 4vw, 40px);
+  padding-inline: var(--gutter);
 }
 
 @utility font-display {
@@ -144,6 +161,11 @@
 .js [data-reveal] { opacity: 0; }
 .js [data-split] { visibility: hidden; }
 .split-line { overflow: clip; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+
+/* Large-pointer-less devices: comfortable 44px hit area for compact controls */
+@utility tap-44 {
+  @media (pointer: coarse) { min-height: 44px; min-width: 44px; }
+}
 
 /* Lenis */
 html.lenis, html.lenis body { height: auto; }

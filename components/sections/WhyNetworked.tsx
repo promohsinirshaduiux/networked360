@@ -90,9 +90,9 @@ function Layer({ kind }: { kind: 'old' | 'new' }) {
       </div>
 
       {/* bottom row: four cards across the full width */}
-      <ul className="relative grid grid-cols-4 gap-3">
+      <ul className="relative grid grid-cols-2 gap-3 lg:grid-cols-4">
         {items.map(({ icon: Icon, t, d }) => (
-          <li key={t} className={cn('grid min-h-[224px] content-start gap-3 rounded-[22px] p-5 lg:min-h-[184px] xl:min-h-[160px]', isNew ? 'bg-white text-ink shadow-float' : 'border border-line bg-white/60')}>
+          <li key={t} className={cn('grid min-h-[164px] content-start gap-3 rounded-[22px] p-5 lg:min-h-[184px] xl:min-h-[160px]', isNew ? 'bg-white text-ink shadow-float' : 'border border-line bg-white/60')}>
             <span className={cn('grid h-10 w-10 place-items-center rounded-xl', isNew ? 'bg-brand-50 text-brand' : 'bg-paper-3 text-ink-4')}>
               <Icon className="h-5 w-5" />
             </span>
@@ -204,7 +204,7 @@ export default function WhyNetworked() {
           aria-valuenow={50}
           onPointerDown={onPointerDown}
           onKeyDown={onKey}
-          className="group/cmp relative hidden h-[500px] cursor-ew-resize touch-pan-y overflow-hidden rounded-[40px] border border-line select-none md:block"
+          className="group/cmp relative hidden h-[600px] cursor-ew-resize touch-pan-y overflow-hidden rounded-[40px] border border-line select-none md:block lg:h-[500px]"
           style={{ ['--split' as string]: '50%' }}
         >
           <Layer kind="old" />
@@ -218,7 +218,7 @@ export default function WhyNetworked() {
             <span className="absolute top-1/2 left-0 grid -translate-x-1/2 -translate-y-1/2 place-items-center">
               <span className="absolute h-[84px] w-[84px] rounded-full bg-white shadow-lift transition-transform duration-500 ease-[var(--ease-expo)] group-data-[dragging]/cmp:scale-110" />
               <LogoMark size={60} spin className="relative" />
-              <span className="absolute -bottom-9 inline-flex items-center gap-1 rounded-full bg-ink px-2.5 py-1 text-[0.7rem] font-semibold whitespace-nowrap text-white">
+              <span className="absolute -bottom-9 inline-flex items-center gap-1 rounded-full bg-ink px-2.5 py-1 text-[0.75rem] font-semibold whitespace-nowrap text-white">
                 <ChevronsLeftRight className="h-3.5 w-3.5" /> Drag
               </span>
             </span>
@@ -228,7 +228,7 @@ export default function WhyNetworked() {
         {/* Phones: the two ways, stacked */}
         <div className="grid gap-4 md:hidden">
           <div className="rounded-[28px] bg-paper-2 p-6">
-            <span className="inline-flex items-center gap-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-ink-4">
+            <span className="inline-flex items-center gap-1.5 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-ink-4">
               <X className="h-3.5 w-3.5" /> The old way
             </span>
             <ul className="mt-4 grid gap-3">
@@ -240,7 +240,7 @@ export default function WhyNetworked() {
             </ul>
           </div>
           <div className="rounded-[28px] bg-brand p-6 text-white">
-            <span className="inline-flex items-center gap-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white/75">
+            <span className="inline-flex items-center gap-1.5 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-white/75">
               <Check className="h-3.5 w-3.5" /> The Networked360 way
             </span>
             <ul className="mt-4 grid gap-3">
@@ -262,7 +262,7 @@ export default function WhyNetworked() {
         {/* Pillars — four cards, four different treatments */}
         <div data-pillars className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1.2fr]">
           {/* 1 — red, timer */}
-          <div data-pillar className="relative flex min-h-[230px] flex-col justify-between overflow-hidden rounded-[28px] bg-brand p-6 text-white shadow-brand">
+          <div data-pillar className="relative flex min-h-[190px] flex-col justify-between gap-6 overflow-hidden rounded-[28px] bg-brand p-6 sm:min-h-[230px] text-white shadow-brand">
             <div className="flex items-start justify-between">
               <span className="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-white/75">Per conversation</span>
               <svg viewBox="0 0 64 64" className="h-16 w-16 -rotate-90" aria-hidden>
@@ -280,14 +280,14 @@ export default function WhyNetworked() {
           </div>
 
           {/* 2 — white, faces */}
-          <div data-pillar className="flex min-h-[230px] flex-col justify-between rounded-[28px] border border-line bg-white p-6 shadow-soft">
+          <div data-pillar className="flex min-h-[190px] flex-col justify-between gap-6 rounded-[28px] border border-line bg-white p-6 sm:min-h-[230px] shadow-soft">
             <div className="flex -space-x-2.5">
               {FACES.map((p) => (
                 <span key={p.name} className="relative h-10 w-10 overflow-hidden rounded-full border-[3px] border-white">
                   <Image src={p.img} alt="" fill sizes="40px" className="object-cover" />
                 </span>
               ))}
-              <span className="relative grid h-10 w-10 place-items-center rounded-full border-[3px] border-white bg-brand-50 text-[0.72rem] font-semibold text-brand">+5</span>
+              <span className="relative grid h-10 w-10 place-items-center rounded-full border-[3px] border-white bg-brand-50 text-[0.75rem] font-semibold text-brand">+5</span>
             </div>
             <div>
               <p className="font-display text-[clamp(3rem,4.4vw,4rem)] leading-none tracking-[-0.04em] text-ink">
@@ -298,7 +298,7 @@ export default function WhyNetworked() {
           </div>
 
           {/* 3 — dark, privacy */}
-          <div data-pillar className="relative flex min-h-[230px] flex-col justify-between overflow-hidden rounded-[28px] bg-ink p-6 text-white">
+          <div data-pillar className="relative flex min-h-[190px] flex-col justify-between gap-6 overflow-hidden rounded-[28px] bg-ink p-6 sm:min-h-[230px] text-white">
             <div aria-hidden className="absolute -right-10 -bottom-12 h-44 w-44 rounded-full border-[18px] border-white/[0.04]" />
             <span className="grid h-11 w-11 place-items-center rounded-full bg-white/10 text-brand-300">
               <Lock className="h-5 w-5" />
@@ -310,7 +310,7 @@ export default function WhyNetworked() {
           </div>
 
           {/* 4 — tinted, formats */}
-          <div data-pillar className="flex min-h-[230px] flex-col justify-between rounded-[28px] border border-brand-100 bg-brand-50 p-6">
+          <div data-pillar className="flex min-h-[190px] flex-col justify-between gap-6 rounded-[28px] border border-brand-100 bg-brand-50 p-6 sm:min-h-[230px]">
             <div className="inline-flex w-fit rounded-full border border-brand-100 bg-white p-1 text-[0.8rem] font-semibold shadow-soft">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-ink px-3 py-1.5 text-white">
                 <MapPin className="h-3.5 w-3.5" /> In person

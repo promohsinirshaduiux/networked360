@@ -25,15 +25,16 @@ export default function Footer() {
   const ref = useRef<HTMLElement>(null);
   const [fixed, setFixed] = useState(false);
 
-  // Fixed "reveal" footer: the page scrolls away to uncover it. Only when it fits the viewport;
-  // otherwise (short phones) it stays in the normal flow so every part stays reachable.
+  // Fixed "reveal" footer: the page scrolls away to uncover it. Only on tablet-and-up screens where it fits
+  // the viewport. Phones keep it in normal flow: position:fixed is janky with mobile browser toolbars
+  // (the viewport height keeps changing) and a tall footer would otherwise become unreachable.
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const root = document.documentElement;
     const measure = () => {
       const h = el.offsetHeight;
-      const fits = h <= window.innerHeight - 40;
+      const fits = h <= window.innerHeight - 40 && window.matchMedia('(min-width: 768px)').matches;
       setFixed(fits);
       root.style.setProperty('--footer-h', fits ? `${h}px` : '0px');
     };
@@ -90,7 +91,7 @@ export default function Footer() {
 
           {COLS.map((c) => (
             <div key={c.h}>
-              <h4 className="mb-5 text-[0.74rem] font-semibold uppercase tracking-[0.16em] text-ink-4">{c.h}</h4>
+              <h4 className="mb-5 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-ink-4">{c.h}</h4>
               <ul className="grid gap-3">
                 {c.links.map((t) => (
                   <li key={t}>
@@ -104,7 +105,7 @@ export default function Footer() {
           ))}
 
           <div className="col-span-2 md:col-span-1">
-            <h4 className="mb-5 text-[0.74rem] font-semibold uppercase tracking-[0.16em] text-ink-4">Follow</h4>
+            <h4 className="mb-5 text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-ink-4">Follow</h4>
             <ul className="flex gap-2">
               {SOCIAL.map(({ icon: Icon, t }) => (
                 <li key={t}>
@@ -147,7 +148,7 @@ export default function Footer() {
             </span>
             <button
               onClick={() => scrollToTarget('#top', 0)}
-              className="group inline-flex items-center gap-2 rounded-full border border-line-2 bg-white py-1.5 pr-1.5 pl-4 font-medium text-ink-2 transition-colors hover:border-ink hover:text-ink"
+              className="group inline-flex min-h-11 items-center gap-2 rounded-full border border-line-2 bg-white py-1.5 pr-1.5 pl-4 font-medium text-ink-2 transition-colors hover:border-ink hover:text-ink"
             >
               Back to top
               <span className="grid h-7 w-7 place-items-center rounded-full bg-ink text-white transition-colors duration-300 group-hover:bg-brand">

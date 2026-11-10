@@ -30,6 +30,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  // lets the page extend under notches; env(safe-area-inset-*) keeps content clear of them
+  viewportFit: 'cover',
   themeColor: '#009fd8',
   colorScheme: 'light',
 };

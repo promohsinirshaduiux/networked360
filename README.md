@@ -29,6 +29,15 @@ npm run build && npm start
 
 All copy and data lives in `lib/content.ts`. Navigation only scrolls within this page and never changes the URL (`ROUTES`). Footer links are plain text for now. Swap them for real routes when the inner pages exist.
 
+## Responsive behavior
+Tested at 320, 360, 375, 600, 667 (landscape), 768 and 1024 px, with no horizontal overflow, no text under 12px and 44px touch targets on phones.
+- **Gutter:** one fluid `--gutter` variable (`app/globals.css`) drives the page container and the swipe carousel bleed, and respects notches (`viewport-fit=cover`, `env(safe-area-inset-*)`).
+- **Touch:** `touch-action: manipulation` (no tap delay), 44px minimum targets on coarse pointers, form fields at 16px so iOS never zooms in, swipe carousels are keyboard-focusable regions.
+- **Layout:** timeline uses one column below 1024px; the comparison cards use two columns on tablets; the comparison slider is replaced by stacked cards on phones; hero portraits scale to fit the gutters.
+- **Mobile menu:** full-height (`dvh`), scrolls on short landscape screens, locks page scroll while open.
+- **Reveal footer:** only on 768px and up when it fits the screen. Phones use a normal footer, because fixed positioning is unreliable with mobile browser toolbars.
+- **Type:** headings use `text-wrap: balance`, paragraphs `text-wrap: pretty`.
+
 ## Assets
 - **Logo:** sources are in `brand-source/`.
   - `public/brand/icon-*.webp` come from "Red Logo.svg", re-centred so the mark sits exactly in the middle of the circle.

@@ -37,7 +37,7 @@ function PickVisual() {
         <span className="flex items-center gap-2 font-medium text-ink-2">
           <Ticket className="h-4 w-4 text-brand" /> Founders × Angels · Flatiron
         </span>
-        <span data-booked className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[0.74rem] font-semibold text-brand shadow-soft">
+        <span data-booked className="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-[0.75rem] font-semibold text-brand shadow-soft">
           <Check className="h-3.5 w-3.5" strokeWidth={3} /> Seat reserved
         </span>
       </div>
@@ -53,7 +53,7 @@ function MeetVisual() {
           <span className="relative h-14 w-14 overflow-hidden rounded-full border-[3px] border-white shadow-soft">
             <Image src={p.img} alt="" fill sizes="56px" className="object-cover" />
           </span>
-          <span className="hidden text-[0.8rem] sm:block">
+          <span className="hidden text-[0.8rem] sm:block lg:hidden xl:block">
             <b className="block font-semibold text-ink">{p.name}</b>
             <span className="text-ink-3">{p.role}</span>
           </span>
@@ -83,7 +83,7 @@ function DecideVisual() {
           </span>
           <span className="min-w-0 flex-1 text-[0.78rem] text-ink-3">{label}</span>
           <span className="relative h-8 w-[78px] [perspective:600px]">
-            <span data-pending className="absolute inset-0 inline-flex items-center justify-center gap-1 rounded-full bg-paper-2 text-[0.74rem] font-medium text-ink-3">
+            <span data-pending className="absolute inset-0 inline-flex items-center justify-center gap-1 rounded-full bg-paper-2 text-[0.75rem] font-medium text-ink-3">
               <Lock className="h-3 w-3" /> Private
             </span>
             <span data-yes className="absolute inset-0 inline-flex items-center justify-center gap-1 rounded-full bg-brand text-[0.78rem] font-semibold text-white opacity-0 shadow-brand">
@@ -210,9 +210,9 @@ export default function HowItWorks() {
 
         <ol data-steps className="relative mx-auto grid max-w-[1100px] gap-10 md:gap-14">
           {/* spine */}
-          <div aria-hidden className="absolute top-2 bottom-2 left-[19px] w-[2px] bg-line-2 md:left-1/2 md:-translate-x-1/2">
+          <div aria-hidden className="absolute top-2 bottom-2 left-[19px] w-[2px] bg-line-2 lg:left-1/2 lg:-translate-x-1/2">
             <div data-fill className="h-full w-full origin-top bg-brand" />
-            <span data-runner className="absolute left-1/2 z-20 block h-10 w-10 -translate-x-1/2 -translate-y-1/2">
+            <span data-runner className="absolute left-1/2 z-20 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 lg:block">
               <LogoMark size={40} spin className="shadow-brand ring-4 ring-paper-2" />
             </span>
           </div>
@@ -221,22 +221,22 @@ export default function HowItWorks() {
             const right = k % 2 === 1;
             const MetaIcon = meta[0];
             return (
-              <li key={title} data-step className="relative grid grid-cols-[40px_1fr] items-start gap-5 md:grid-cols-[1fr_80px_1fr] md:gap-0">
+              <li key={title} data-step className="relative grid grid-cols-[40px_1fr] items-start gap-5 lg:grid-cols-[1fr_80px_1fr] lg:gap-0">
                 {/* node */}
-                <span data-dot aria-hidden className="relative z-10 mt-7 grid h-10 w-10 scale-75 place-items-center rounded-full bg-ink-4 text-white ring-8 ring-paper-2 md:col-start-2 md:row-start-1 md:mx-auto">
+                <span data-dot aria-hidden className="relative z-10 mt-7 grid h-10 w-10 scale-75 place-items-center rounded-full bg-ink-4 text-white ring-8 ring-paper-2 lg:col-start-2 lg:row-start-1 lg:mx-auto">
                   <Icon className="h-[18px] w-[18px]" />
                 </span>
 
                 {/* card (auto height) */}
-                <div data-card className={cn('min-w-0 md:row-start-1', right ? 'md:col-start-3 md:pl-6' : 'md:col-start-1 md:pr-6')}>
+                <div data-card className={cn('min-w-0 lg:row-start-1', right ? 'lg:col-start-3 lg:pl-6' : 'lg:col-start-1 lg:pr-6')}>
                   <article
                     className={cn(
-                      'w-full rounded-[26px] border border-line bg-white/90 p-6 shadow-soft backdrop-blur transition-shadow duration-500 hover:shadow-float sm:p-7 md:max-w-[470px]',
-                      right ? 'md:mr-auto' : 'md:ml-auto',
+                      'w-full rounded-[26px] border border-line bg-white/90 p-6 shadow-soft backdrop-blur transition-shadow duration-500 hover:shadow-float sm:p-7 lg:max-w-[470px]',
+                      right ? 'lg:mr-auto' : 'lg:ml-auto',
                     )}
                   >
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                      <span className="rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-[0.74rem] font-semibold text-brand-600">Step {k + 1}</span>
+                      <span className="rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-[0.75rem] font-semibold text-brand-600">Step {k + 1}</span>
                       <span className="inline-flex items-center gap-1.5 text-[0.8rem] text-ink-4">
                         <MetaIcon className="h-3.5 w-3.5" /> {meta[1]}
                       </span>
@@ -254,8 +254,8 @@ export default function HowItWorks() {
                   data-num
                   aria-hidden
                   className={cn(
-                    'hidden self-center font-display text-[clamp(7rem,12vw,11rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(0_159_216/0.35)] md:row-start-1 md:block',
-                    right ? 'md:col-start-1 md:justify-self-end md:pr-10' : 'md:col-start-3 md:pl-10',
+                    'hidden self-center font-display text-[clamp(7rem,12vw,11rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(0_159_216/0.35)] lg:row-start-1 lg:block',
+                    right ? 'lg:col-start-1 lg:justify-self-end lg:pr-10' : 'lg:col-start-3 lg:pl-10',
                   )}
                 >
                   0{k + 1}

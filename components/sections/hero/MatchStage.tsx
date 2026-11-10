@@ -31,7 +31,7 @@ function Arch({ p, className }: { p: Person; className?: string }) {
       <Image src={p.img} alt="" fill sizes="(max-width: 1024px) 30vw, 180px" className="object-cover transition-transform duration-[1.2s] ease-[var(--ease-expo)] group-hover/arch:scale-105" />
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent p-3 pt-10 text-left text-white opacity-0 transition-opacity duration-500 group-hover/arch:opacity-100">
         <p className="text-[0.8rem] font-semibold leading-tight">{p.name}</p>
-        <p className="text-[0.7rem] text-white/80">{p.role}</p>
+        <p className="text-[0.75rem] text-white/80">{p.role}</p>
       </div>
     </div>
   );
@@ -103,7 +103,7 @@ export default function MatchStage() {
   );
 
   const centre = (side: 'left' | 'right') => (
-    <div {...{ [`data-${side}`]: '' }} className="relative h-[94%] w-[clamp(124px,20vw,210px)]">
+    <div {...{ [`data-${side}`]: '' }} className="relative h-[94%] w-[clamp(84px,calc((100vw-150px)/2),124px)] md:w-[clamp(124px,20vw,210px)]">
       <div data-pair className="relative h-full overflow-hidden rounded-t-full rounded-b-[30px] bg-paper-3 shadow-lift">
         {PAIRS.map((pr, k) => (
           <div key={k} data-face className="absolute inset-0" style={{ opacity: k === 0 ? 1 : 0 }}>
@@ -156,7 +156,7 @@ export default function MatchStage() {
               </svg>
               <span className="relative text-center leading-none">
                 <span data-time className="block text-[1.05rem] font-semibold tabular-nums text-ink md:text-[1.15rem]">7:00</span>
-                <span className="mt-1 block text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-ink-4">min left</span>
+                <span className="mt-1 block text-[0.75rem] font-semibold uppercase tracking-[0.04em] text-ink-4">min left</span>
               </span>
             </div>
             <div data-heart className="absolute inset-1 grid place-items-center opacity-0">

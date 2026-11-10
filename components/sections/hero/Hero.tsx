@@ -31,9 +31,9 @@ function NextRoom() {
   return (
     <a
       href={ROUTES.upcoming}
-      className="group inline-flex items-center gap-3 rounded-full border border-brand-200 bg-white/85 py-1.5 pr-4 pl-1.5 text-[0.84rem] text-ink-3 shadow-soft backdrop-blur transition-colors hover:border-brand"
+      className="group inline-flex min-h-11 items-center gap-3 rounded-full border border-brand-200 bg-white/85 py-1.5 pr-4 pl-1.5 text-[0.84rem] text-ink-3 shadow-soft backdrop-blur transition-colors hover:border-brand"
     >
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.1em] text-white">
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-2.5 py-1 text-[0.75rem] font-bold uppercase tracking-[0.1em] text-white">
         <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-white" /> Live
       </span>
       <span className="hidden sm:inline">Next room starts in</span>

@@ -29,7 +29,7 @@ function Panel({ c, k, open }: { c: ExploreCategory; k: number; open: boolean })
         <span className="grid h-11 w-11 place-items-center rounded-full bg-white shadow-float" style={{ color: c.color }}>
           <Icon className="h-[18px] w-[18px]" />
         </span>
-        <span className={cn('rounded-full bg-black/30 px-3 py-1.5 text-[0.74rem] font-medium tabular-nums text-white backdrop-blur-md transition-opacity duration-500', open ? 'opacity-100' : 'opacity-0')}>
+        <span className={cn('rounded-full bg-black/30 px-3 py-1.5 text-[0.75rem] font-medium tabular-nums text-white backdrop-blur-md transition-opacity duration-500', open ? 'opacity-100' : 'opacity-0')}>
           {pad(k + 1)} / {pad(EXPLORE.length)}
         </span>
       </div>
@@ -43,7 +43,7 @@ function Panel({ c, k, open }: { c: ExploreCategory; k: number; open: boolean })
         )}
       >
         {c.name}
-        <span className="font-sans text-[0.72rem] font-semibold tabular-nums text-white/60">{pad(k + 1)}</span>
+        <span className="font-sans text-[0.75rem] font-semibold tabular-nums text-white/60">{pad(k + 1)}</span>
       </span>
 
       {/* expanded content */}
@@ -53,7 +53,7 @@ function Panel({ c, k, open }: { c: ExploreCategory; k: number; open: boolean })
           open ? 'translate-y-0 opacity-100 delay-200' : 'pointer-events-none translate-y-6 opacity-0',
         )}
       >
-        <span className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white/70">{c.tagline}</span>
+        <span className="text-[0.75rem] font-semibold uppercase leading-snug tracking-[0.12em] text-white/75">{c.tagline}</span>
         <h3 className="font-display text-[clamp(2rem,3vw,2.9rem)] leading-[1] tracking-[-0.03em]">{c.name}</h3>
         <p className="max-w-[34ch] text-[1rem] leading-relaxed text-white/85">{c.body}</p>
 
@@ -141,9 +141,9 @@ export default function ExploreEvents() {
         </div>
 
         {/* Mobile & tablet: swipe carousel */}
-        <div data-panels className="no-scrollbar -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:-mx-8 sm:px-8 lg:hidden">
+        <div data-panels role="region" aria-label="Event categories, swipe to browse" tabIndex={0} className="no-scrollbar -mx-[var(--gutter)] flex snap-x snap-mandatory scroll-px-[var(--gutter)] gap-3 overflow-x-auto overscroll-x-contain px-[var(--gutter)] pb-2 lg:hidden">
           {EXPLORE.map((c, k) => (
-            <article key={c.id} data-panel className="group relative h-[500px] w-[82vw] max-w-[420px] shrink-0 snap-center overflow-hidden rounded-[28px] bg-paper-3 shadow-soft">
+            <article key={c.id} data-panel className="group relative h-[min(500px,72svh)] min-h-[440px] w-[82vw] max-w-[420px] shrink-0 snap-center overflow-hidden rounded-[28px] bg-paper-3 shadow-soft">
               <Panel c={c} k={k} open />
             </article>
           ))}

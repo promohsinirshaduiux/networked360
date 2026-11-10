@@ -31,9 +31,9 @@ function Poster({ e }: { e: EventItem }) {
       {/* top: date + format */}
       <div className="flex items-start justify-between">
         <div className="w-[70px] overflow-hidden rounded-[18px] border border-white/60 bg-white/85 text-center text-ink shadow-float backdrop-blur-xl">
-          <span className="block bg-brand py-1 text-[0.64rem] font-bold uppercase tracking-[0.2em] text-white">{MONTHS[d.getMonth()]}</span>
+          <span className="block bg-brand py-1 text-[0.75rem] font-bold uppercase tracking-[0.2em] text-white">{MONTHS[d.getMonth()]}</span>
           <span className="block pt-2 font-display text-[2.1rem] leading-none tabular-nums">{d.getDate()}</span>
-          <span className="block pt-1 pb-2 text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-ink-4">{DAYS[d.getDay()]}</span>
+          <span className="block pt-1 pb-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-ink-4">{DAYS[d.getDay()]}</span>
         </div>
         <div className="grid justify-items-end gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/15 px-3 py-1.5 text-[0.76rem] font-semibold backdrop-blur-md">
@@ -47,7 +47,7 @@ function Poster({ e }: { e: EventItem }) {
 
       {/* bottom: glass panel */}
       <div className="rounded-[24px] border border-white/60 bg-white/80 p-5 text-ink shadow-float ring-1 ring-black/[0.03] backdrop-blur-2xl backdrop-saturate-150">
-        <span className="inline-flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.14em]" style={{ color: e.color }}>
+        <span className="inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em]" style={{ color: e.color }}>
           <span className="h-1.5 w-1.5 rounded-full" style={{ background: e.color }} /> {e.category}
         </span>
         <h3 className="mt-2 font-display text-[1.55rem] leading-[1.08] tracking-[-0.02em]">{e.title}</h3>
@@ -64,7 +64,7 @@ function Poster({ e }: { e: EventItem }) {
           </span>
         </div>
         <div className="mt-4">
-          <div className="mb-1.5 flex justify-between text-[0.74rem]">
+          <div className="mb-1.5 flex justify-between text-[0.75rem]">
             <span className="text-ink-4">{booked} booked</span>
             <span className={cn('font-semibold', low ? 'text-brand' : 'text-ink-3')}>{low ? `Only ${e.seatsLeft} seats left` : `${e.seatsLeft} seats left`}</span>
           </div>
