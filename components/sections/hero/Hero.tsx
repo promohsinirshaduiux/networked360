@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { BadgeCheck, CalendarDays, EyeOff, MapPin } from 'lucide-react';
 import { ButtonLink } from '@/components/ui/Button';
-import { PEOPLE, ROUTES, UPCOMING } from '@/lib/content';
+import { COMPANIES, PEOPLE, ROUTES, UPCOMING } from '@/lib/content';
 import { gsap, useGSAP } from '@/lib/gsap';
 
 const TRUST = [
@@ -41,6 +41,37 @@ function NextRoom() {
       </span>
       <CalendarDays className="h-4 w-4 text-white/70 transition-colors group-hover:text-white" />
     </a>
+  );
+}
+
+/** Slow, seamless loop of the company logos. Two identical copies scroll by half their width; the second is hidden from assistive tech. */
+function LogoMarquee() {
+  return (
+    <div data-hero-fade className="mt-10 w-full max-w-[1000px] md:mt-12">
+      <p className="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-white/75">People from the world’s leading companies</p>
+      <div className="relative mt-5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]">
+        <div className="flex w-max animate-marquee [animation-duration:90s] hover:[animation-play-state:paused] motion-reduce:animate-none">
+          {[0, 1].map((copy) => (
+            <ul key={copy} aria-hidden={copy === 1 || undefined} className="flex shrink-0 items-center gap-12 pr-12 md:gap-16 md:pr-16">
+              {COMPANIES.map((c) => (
+                <li key={c.name} className="flex items-center">
+                  <Image
+                    src={c.logo}
+                    alt={copy === 0 ? c.name : ''}
+                    width={120}
+                    height={c.h}
+                    unoptimized
+                    loading="eager"
+                    className="w-auto max-w-[110px] object-contain opacity-80 brightness-0 invert"
+                    style={{ height: c.h * 0.7 }}
+                  />
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -134,6 +165,8 @@ export default function Hero() {
             </span>
           ))}
         </div>
+
+        <LogoMarquee />
       </div>
       </div>
     </section>
