@@ -109,7 +109,7 @@ function MatchVisual() {
           ))}
         </div>
         <div>
-          <p className="font-display text-[1.6rem] leading-none italic">It’s a match.</p>
+          <p className="font-display font-bold text-[1.5rem] leading-none">It’s a match.</p>
           <p className="mt-1 text-[0.82rem] text-white/80">Details shared by 10 AM tomorrow</p>
         </div>
       </div>
@@ -202,7 +202,7 @@ export default function HowItWorks() {
           align="center"
           title={
             <>
-              Five to seven minutes. <em className="text-gradient italic">Then you decide.</em>
+              Five to seven minutes. <em className="text-gradient">Then you decide.</em>
             </>
           }
           lead="No swiping, no endless messaging. Real conversations on a timer, private choices, and connections that only happen when you both want them."
@@ -241,7 +241,7 @@ export default function HowItWorks() {
                         <MetaIcon className="h-3.5 w-3.5" /> {meta[1]}
                       </span>
                     </div>
-                    <h3 className="mt-4 font-display text-[clamp(1.6rem,2.2vw,2rem)] leading-[1.08] tracking-[-0.025em] text-ink">{title}</h3>
+                    <h3 className="mt-4 font-display font-bold text-[clamp(1.45rem,1.9vw,1.75rem)] leading-[1.15] tracking-[-0.025em] text-ink">{title}</h3>
                     <p className="mt-2 max-w-[40ch] text-[0.98rem] leading-relaxed text-ink-3">{body}</p>
                     <div className="mt-5 border-t border-line pt-5">
                       <Visual />
@@ -254,7 +254,7 @@ export default function HowItWorks() {
                   data-num
                   aria-hidden
                   className={cn(
-                    'hidden self-center font-display text-[clamp(7rem,12vw,11rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(0_159_216/0.35)] lg:row-start-1 lg:block',
+                    'hidden self-center font-display font-extrabold text-[clamp(5.5rem,10vw,9rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(0_159_216/0.35)] lg:row-start-1 lg:block',
                     right ? 'lg:col-start-1 lg:justify-self-end lg:pr-10' : 'lg:col-start-3 lg:pl-10',
                   )}
                 >

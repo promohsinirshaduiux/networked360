@@ -71,10 +71,10 @@ export default function FinalCTA() {
 
         {/* giant drifting outline type */}
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 flex flex-col justify-between overflow-hidden py-6 select-none">
-          <p data-drift="1" className="font-display text-[clamp(5rem,15vw,15rem)] leading-none whitespace-nowrap text-transparent [-webkit-text-stroke:1.5px_rgb(255_255_255/0.18)]">
+          <p data-drift="1" className="font-display font-extrabold text-[clamp(4rem,12vw,11.5rem)] leading-none whitespace-nowrap text-transparent [-webkit-text-stroke:1.5px_rgb(255_255_255/0.18)]">
             Meet · Talk · Say yes · Meet · Talk · Say yes
           </p>
-          <p data-drift="-1" className="-ml-[40%] font-display text-[clamp(5rem,15vw,15rem)] leading-none whitespace-nowrap text-transparent italic [-webkit-text-stroke:1.5px_rgb(255_255_255/0.18)]">
+          <p data-drift="-1" className="-ml-[40%] font-display font-extrabold text-[clamp(4rem,12vw,11.5rem)] leading-none whitespace-nowrap text-transparent [-webkit-text-stroke:1.5px_rgb(255_255_255/0.18)]">
             It’s a match · It’s a match · It’s a match
           </p>
         </div>
@@ -84,10 +84,10 @@ export default function FinalCTA() {
             <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-3.5 py-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] backdrop-blur">
               <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-white" /> Free to join
             </span>
-            <h2 data-headline className="font-display text-[clamp(2.8rem,6.4vw,6.2rem)] leading-[0.98] font-[340] tracking-[-0.035em]">
+            <h2 data-headline className="font-display font-extrabold text-[clamp(2.3rem,5.2vw,4.9rem)] leading-[1.05] tracking-[-0.04em]">
               {words.map((w, k) => (
                 <span key={k} className="inline-block overflow-hidden pr-[0.22em] pb-[0.06em] align-top">
-                  <span data-word className={k === 4 || k === 5 ? 'inline-block italic' : 'inline-block'}>
+                  <span data-word className={k === 4 || k === 5 ? 'inline-block' : 'inline-block'}>
                     {w}
                   </span>
                 </span>

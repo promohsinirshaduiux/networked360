@@ -4,7 +4,7 @@
 /* Design tokens — brand red #009fd8 on warm light neutrals            */
 /* ------------------------------------------------------------------ */
 @theme {
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-display: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-sans: var(--font-dmsans), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --color-brand: #009fd8;
@@ -97,6 +97,8 @@
   input, select, textarea { font-size: max(16px, 1em); }
 
   /* Better line breaks: balanced headings, no one-word last lines in paragraphs */
+  /* Manrope has no italic: emphasis comes from colour, so never fake a slant */
+  em { font-style: normal; }
   h1, h2, h3, blockquote { text-wrap: balance; }
   p { text-wrap: pretty; }
 
@@ -114,14 +116,24 @@
   padding-inline: var(--gutter);
 }
 
+/* Headings: Manrope. Weight is set per element (700 headings, 800 hero and big numerals, 600 long quotes).
+   Display sizes get tighter tracking; smaller headings override it with tracking-* utilities. */
 @utility font-display {
   font-family: var(--font-display);
-  font-variation-settings: 'opsz' 144, 'SOFT' 30;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
 }
 
 @utility text-gradient {
   background: linear-gradient(100deg, #0082b0 0%, #009fd8 40%, #4fc3ec 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.06em;
+}
+
+/* Gradient emphasis for text on dark photos: light enough for AA large-text contrast */
+@utility text-gradient-light {
+  background: linear-gradient(100deg, #9be3fa 0%, #c9efff 55%, #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

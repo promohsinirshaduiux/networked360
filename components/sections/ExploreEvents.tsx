@@ -38,7 +38,7 @@ function Panel({ c, k, open }: { c: ExploreCategory; k: number; open: boolean })
       <span
         aria-hidden
         className={cn(
-          'absolute bottom-7 left-1/2 hidden -translate-x-1/2 rotate-180 items-center gap-3 font-display text-[1.55rem] leading-none whitespace-nowrap text-white transition-opacity duration-300 [writing-mode:vertical-rl] lg:flex',
+          'absolute bottom-7 left-1/2 hidden -translate-x-1/2 rotate-180 items-center gap-3 font-display font-bold text-[1.3rem] leading-none whitespace-nowrap text-white transition-opacity duration-300 [writing-mode:vertical-rl] lg:flex',
           open ? 'opacity-0' : 'opacity-100 delay-300',
         )}
       >
@@ -54,7 +54,7 @@ function Panel({ c, k, open }: { c: ExploreCategory; k: number; open: boolean })
         )}
       >
         <span className="text-[0.75rem] font-semibold uppercase leading-snug tracking-[0.12em] text-white/75">{c.tagline}</span>
-        <h3 className="font-display text-[clamp(2rem,3vw,2.9rem)] leading-[1] tracking-[-0.03em]">{c.name}</h3>
+        <h3 className="font-display font-bold text-[clamp(1.75rem,2.6vw,2.4rem)] leading-[1.08] tracking-[-0.03em]">{c.name}</h3>
         <p className="max-w-[34ch] text-[1rem] leading-relaxed text-white/85">{c.body}</p>
 
         <div className="mt-2 flex flex-wrap items-center gap-2 border-t border-white/15 pt-4">
@@ -103,7 +103,7 @@ export default function ExploreEvents() {
           eyebrow="Explore events"
           title={
             <>
-              One format. <em className="text-gradient italic">Every</em> kind of room.
+              One format. <em className="text-gradient">Every</em> kind of room.
             </>
           }
           lead="Short conversations, private choices, mutual connections — the same simple rules in every room."

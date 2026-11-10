@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { DM_Sans, Fraunces } from 'next/font/google';
+import { DM_Sans, Manrope } from 'next/font/google';
 import SmoothScroll from '@/components/providers/SmoothScroll';
 import './globals.css';
 
-const fraunces = Fraunces({
+// Headings: Manrope (variable, 200-800). Body: DM Sans.
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-fraunces',
-  axes: ['opsz', 'SOFT'],
-  style: ['normal', 'italic'],
+  variable: '--font-manrope',
   display: 'swap',
 });
 
@@ -40,7 +39,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${manrope.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <SmoothScroll />

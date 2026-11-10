@@ -31,17 +31,16 @@ function NextRoom() {
   return (
     <a
       href={ROUTES.upcoming}
-      className="group inline-flex min-h-11 items-center gap-3 rounded-full border border-brand-200 bg-white/85 py-1.5 pr-4 pl-1.5 text-[0.84rem] text-ink-3 shadow-soft backdrop-blur transition-colors hover:border-brand"
+      className="group inline-flex min-h-11 items-center gap-2.5 whitespace-nowrap rounded-full sm:gap-3 border border-white/30 bg-white/12 py-1.5 pr-4 pl-1.5 text-[0.84rem] text-white/90 backdrop-blur-md transition-colors hover:border-white/60 hover:bg-white/20"
     >
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-2.5 py-1 text-[0.75rem] font-bold uppercase tracking-[0.1em] text-white">
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#00739d] px-2.5 py-1 text-[0.75rem] font-bold uppercase tracking-[0.1em] text-white">
         <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-white" /> Live
       </span>
       <span className="hidden sm:inline">Next room starts in</span>
-      <span className="sm:hidden">Next room in</span>
-      <span className="font-semibold tabular-nums text-ink">
-        {d}d {h}h {m}m <span className="text-brand">{s}s</span>
+      <span className="font-semibold tabular-nums text-white">
+        {d}d {h}h {m}m <span className="text-brand-300">{s}s</span>
       </span>
-      <CalendarDays className="h-4 w-4 text-ink-4 transition-colors group-hover:text-brand" />
+      <CalendarDays className="h-4 w-4 text-white/70 transition-colors group-hover:text-white" />
     </a>
   );
 }
@@ -76,16 +75,20 @@ export default function Hero() {
   );
 
   return (
-    <section ref={ref} id="top" aria-label="Introduction" className="grain relative isolate overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20">
-      <div aria-hidden className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,#d9f1fa_0%,transparent_70%),radial-gradient(40%_40%_at_85%_30%,#fff1ea_0%,transparent_70%),radial-gradient(40%_40%_at_10%_40%,#f0f9fd_0%,transparent_70%)]" />
-      <div aria-hidden className="dot-grid absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_60%_55%_at_50%_30%,#000_10%,transparent_75%)]" />
+    // 24px margin on every side; the top starts 24px below the floating navbar (16px offset + 64px bar + 24px)
+    <section ref={ref} id="top" aria-label="Introduction" className="px-6 pt-[104px] pb-6">
+      <div className="relative isolate overflow-hidden rounded-[30px] bg-[#06222f] pt-12 pb-16 md:pt-16 md:pb-20">
+        {/* background photo, then a navy overlay that keeps white text above AA contrast (about 5.7:1 even over the brightest pixels) */}
+        <Image src="/images/scenes/cta-toast.jpg" alt="" fill priority sizes="(max-width: 1400px) 100vw, 1400px" className="-z-20 object-cover object-[62%_30%]" />
+        <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-[#04202d]/80 via-[#06222f]/70 to-[#06222f]/85" />
+        <div aria-hidden className="absolute inset-0 -z-10 opacity-[0.14] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:22px_22px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_30%,#000_10%,transparent_80%)]" />
 
       <div data-hero-copy className="container-x flex flex-col items-center text-center">
         <div data-hero-pill>
           <NextRoom />
         </div>
 
-        <h1 className="mt-8 font-display text-[clamp(2.9rem,7.4vw,7.4rem)] leading-[0.98] font-[340] text-ink">
+        <h1 className="mt-8 font-display font-extrabold text-[clamp(2.4rem,6.2vw,5.6rem)] leading-[1.04] tracking-[-0.04em] text-white">
           <span data-line className="block overflow-hidden pb-[0.06em]">
             <span className="block">Real connections,</span>
           </span>
@@ -93,15 +96,15 @@ export default function Hero() {
             <span className="inline-flex items-center gap-[0.18em]">
               <span data-stack aria-hidden className="hidden -space-x-[0.18em] sm:inline-flex">
                 {STACK.map((p) => (
-                  <span key={p.name} className="relative inline-block h-[0.78em] w-[0.78em] overflow-hidden rounded-full border-[0.05em] border-paper shadow-soft">
+                  <span key={p.name} className="relative inline-block h-[0.78em] w-[0.78em] overflow-hidden rounded-full border-[0.05em] border-white shadow-soft">
                     <Image src={p.img} alt="" fill sizes="96px" className="object-cover" loading="eager" />
                   </span>
                 ))}
               </span>
               <span className="relative">
-                <em className="text-gradient font-[320] italic">seven minutes</em>
+                <em className="text-gradient-light">seven minutes</em>
                 <svg aria-hidden viewBox="0 0 300 20" preserveAspectRatio="none" className="absolute -bottom-[0.06em] left-0 h-[0.18em] w-full overflow-visible">
-                  <path data-underline pathLength={1} d="M3 14 C 60 4, 140 4, 200 10 S 280 16, 297 6" fill="none" stroke="#009fd8" strokeWidth="5" strokeLinecap="round" strokeDasharray="1" />
+                  <path data-underline pathLength={1} d="M3 14 C 60 4, 140 4, 200 10 S 280 16, 297 6" fill="none" stroke="#7fd3f3" strokeWidth="5" strokeLinecap="round" strokeDasharray="1" />
                 </svg>
               </span>
             </span>
@@ -111,30 +114,31 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p data-hero-fade className="mt-7 max-w-[52ch] text-[clamp(1.05rem,1.4vw,1.22rem)] leading-relaxed text-ink-3">
+        <p data-hero-fade className="mt-7 max-w-[52ch] text-[clamp(1.05rem,1.4vw,1.22rem)] leading-relaxed text-white/90">
           Meet founders, hiring managers, investors, mentors, new friends — or someone special. Talk face to face for 5–7 minutes, say yes
           privately, and connect only when it’s mutual.
         </p>
 
         <div data-hero-fade className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <ButtonLink href={ROUTES.getStarted} size="lg" arrow>
+          <ButtonLink href={ROUTES.getStarted} size="lg" variant="white" arrow>
             Get Started
           </ButtonLink>
-          <ButtonLink href={ROUTES.events} size="lg" variant="outline">
+          <ButtonLink href={ROUTES.events} size="lg" variant="outline-light">
             Explore Events
           </ButtonLink>
         </div>
 
-        <div data-hero-fade className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.88rem] text-ink-3">
+        <div data-hero-fade className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[0.88rem] text-white/90">
           {TRUST.map(({ icon: Icon, t }) => (
             <span key={t} className="inline-flex items-center gap-1.5">
-              <Icon className="h-4 w-4 text-brand" /> {t}
+              <Icon className="h-4 w-4 text-brand-300" /> {t}
             </span>
           ))}
         </div>
       </div>
 
       <MatchStage />
+      </div>
     </section>
   );
 }

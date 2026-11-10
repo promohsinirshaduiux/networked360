@@ -2,7 +2,7 @@
 
 A light-mode landing page for Networked360, the speed-networking platform.
 - **Stack:** Next.js 16 (App Router), Tailwind CSS 4, GSAP 3 (ScrollTrigger, SplitText), Lenis smooth scroll and **Lucide** icons.
-- **Brand:** color #009fd8 (`--color-brand` in `app/globals.css`; shades 50–700 sit beside it). Headings use Fraunces and body text uses DM Sans.
+- **Brand:** color #009fd8 (`--color-brand` in `app/globals.css`; shades 50–700 sit beside it). Headings use Manrope (700 for headings, 800 for the hero and big numerals, 600 for long quotes; no italics, emphasis is carried by color) and body text uses DM Sans.
 
 ## Run
 ```bash
@@ -15,7 +15,7 @@ npm run build && npm start
 | Section | File | Highlights |
 |---|---|---|
 | Navbar | `sections/Navbar.tsx` | Full red logo; Home · Events · About Us · Contact Us. The active item is static: it changes only on click, never on scroll. Login + Get Started |
-| Hero | `sections/hero/*` | Live countdown to the next room; headline lines reveal with an inline avatar stack and a drawn underline; arch portraits with a looping 7:00 → "It's a match" moment; rotating 360° rings; floating member chips; arches spread apart on scroll |
+| Hero | `sections/hero/*` | Rounded 30px photo card (24px margin all round, starting below the navbar) with a navy overlay and white text; live countdown to the next room; headline lines reveal with an inline avatar stack and a drawn underline; arch portraits with a looping 7:00 → "It's a match" moment; rotating 360° rings; floating member chips; arches spread apart on scroll |
 | Marquee | `sections/Marquee.tsx` | Crossed tapes that react to scroll speed and direction |
 | Explore events | `sections/ExploreEvents.tsx` | Expanding panels: one open card, the others compact with vertical labels. Swipe cards on mobile |
 | How it works | `sections/HowItWorks.tsx` | Vertical timeline; the spine fills and the spinning logo travels down it; content-sized cards with light Step pills; each step has its own small animation |
@@ -41,7 +41,7 @@ Tested at 320, 360, 375, 600, 667 (landscape), 768 and 1024 px, with no horizont
 ## Assets
 - **Logo:** sources are in `brand-source/`.
   - `public/brand/icon-*.webp` come from "Red Logo.svg", re-centred so the mark sits exactly in the middle of the circle.
-  - `public/brand/logo-full*.webp` are "Red Logo Name.png" recoloured to #009fd8, which the client approved; `icon-*.webp` are the round icon in the same blue.
+  - `public/brand/logo-full*.webp` are "Red Logo Name.png": the mark in #009fd8 and the "Networked360" wordmark in gray-900 (#111827), both recolors approved by the client; `icon-*.webp` are the round icon in the same blue.
   - `<LogoMark spin />` adds the quick 360° turn, pause and repeat.
 - **Photos:** free-license images from Freepik (magnific.com), in `public/images`.
   - Portraits are cropped to 3:4. The originals are in `_archive/source-photos`.

@@ -86,8 +86,8 @@ export default function Companies() {
           <Reveal>
             <Eyebrow>Who you’ll meet</Eyebrow>
           </Reveal>
-          <SplitReveal className="font-display text-[clamp(2.5rem,5vw,4.8rem)] leading-[1] font-[360] text-ink">
-            People from the world’s <em className="text-gradient italic">leading companies.</em>
+          <SplitReveal className="font-display font-bold text-[clamp(2.1rem,4.4vw,3.9rem)] leading-[1.08] tracking-[-0.03em] text-ink">
+            People from the world’s <em className="text-gradient">leading companies.</em>
           </SplitReveal>
           <Reveal delay={0.1}>
             <p className="max-w-[44ch] text-[1.08rem] leading-relaxed text-ink-3">

@@ -161,7 +161,7 @@ export default function Navbar() {
                 onClick={() => {
                   setActive(l.id);
                   setOpen(false);
-                }} className="flex items-center justify-between py-3 font-display text-[clamp(2.2rem,9vw,3rem)] leading-tight text-ink">
+                }} className="flex items-center justify-between py-3 font-display font-bold text-[clamp(2rem,8vw,2.6rem)] leading-tight text-ink">
                 {l.label}
                 <span className="flex items-center gap-2 font-sans text-xs text-brand">
                   0{i + 1} <ArrowUpRight className="h-4 w-4" />

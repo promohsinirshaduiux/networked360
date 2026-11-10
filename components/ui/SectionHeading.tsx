@@ -15,7 +15,7 @@ type Props = {
 /** Consistent section header: eyebrow, split-reveal display title and optional lead. */
 export default function SectionHeading({ eyebrow, title, lead, align = 'left', className, aside }: Props) {
   const titleEl = (
-    <SplitReveal className="font-display text-[clamp(2.5rem,5.6vw,5.4rem)] leading-[1.0] font-[360] text-ink">{title}</SplitReveal>
+    <SplitReveal className="font-display font-bold text-[clamp(2.1rem,4.6vw,4rem)] leading-[1.08] tracking-[-0.03em] text-ink">{title}</SplitReveal>
   );
   if (align === 'split') {
     return (

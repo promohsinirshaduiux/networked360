@@ -20,7 +20,7 @@ function Tape({ reverse, tone }: { reverse?: boolean; tone: 'brand' | 'light' })
           <div key={dup} className="flex shrink-0 items-center" aria-hidden={dup === 1}>
             {words.map((w, k) => (
               <span key={`${dup}-${k}`} className="flex items-center">
-                <span className={cn('px-5 font-display text-[clamp(1.6rem,3.4vw,2.9rem)] leading-none tracking-[-0.03em] whitespace-nowrap md:px-8', k % 2 === 1 && 'italic')}>
+                <span className={cn('px-5 font-display text-[clamp(1.4rem,3vw,2.5rem)] leading-none tracking-[-0.03em] whitespace-nowrap md:px-8', k % 2 === 1 ? 'font-medium' : 'font-extrabold')}>
                   {w}
                 </span>
                 <Sparkle aria-hidden className={cn('h-5 w-5 shrink-0 fill-current md:h-6 md:w-6', tone === 'brand' ? 'text-white/70' : 'text-brand')} />

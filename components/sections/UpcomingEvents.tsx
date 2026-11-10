@@ -32,7 +32,7 @@ function Poster({ e }: { e: EventItem }) {
       <div className="flex items-start justify-between">
         <div className="w-[70px] overflow-hidden rounded-[18px] border border-white/60 bg-white/85 text-center text-ink shadow-float backdrop-blur-xl">
           <span className="block bg-brand py-1 text-[0.75rem] font-bold uppercase tracking-[0.2em] text-white">{MONTHS[d.getMonth()]}</span>
-          <span className="block pt-2 font-display text-[2.1rem] leading-none tabular-nums">{d.getDate()}</span>
+          <span className="block pt-2 font-display font-extrabold text-[1.9rem] leading-none tabular-nums">{d.getDate()}</span>
           <span className="block pt-1 pb-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-ink-4">{DAYS[d.getDay()]}</span>
         </div>
         <div className="grid justify-items-end gap-2">
@@ -50,7 +50,7 @@ function Poster({ e }: { e: EventItem }) {
         <span className="inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em]" style={{ color: e.color }}>
           <span className="h-1.5 w-1.5 rounded-full" style={{ background: e.color }} /> {e.category}
         </span>
-        <h3 className="mt-2 font-display text-[1.55rem] leading-[1.08] tracking-[-0.02em]">{e.title}</h3>
+        <h3 className="mt-2 font-display font-bold text-[1.4rem] leading-[1.15] tracking-[-0.02em]">{e.title}</h3>
         <p className="mt-1.5 text-[0.9rem] leading-snug text-ink-3">{e.blurb}</p>
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[0.8rem] text-ink-3">
           <span className="inline-flex items-center gap-1.5">
@@ -123,7 +123,7 @@ export default function UpcomingEvents() {
           eyebrow="Upcoming events"
           title={
             <>
-              Rooms opening <em className="text-gradient italic">near you.</em>
+              Rooms opening <em className="text-gradient">near you.</em>
             </>
           }
           lead="A few featured rooms this month. New events open every week across New York, New Jersey and online."

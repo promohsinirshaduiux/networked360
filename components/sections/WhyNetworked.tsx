@@ -49,10 +49,10 @@ function Layer({ kind }: { kind: 'old' | 'new' }) {
               </span>
             )}
           </span>
-          <p className={cn('font-display text-[clamp(2.2rem,4vw,3.6rem)] leading-[1] tracking-[-0.035em]', !isNew && 'text-ink-3')}>
+          <p className={cn('font-display font-bold text-[clamp(1.9rem,3.4vw,3rem)] leading-[1.08] tracking-[-0.035em]', !isNew && 'text-ink-3')}>
             {isNew ? (
               <>
-                Meet, talk, <em className="italic">say yes.</em>
+                Meet, talk, <em>say yes.</em>
               </>
             ) : (
               'Swipe, wait, repeat.'
@@ -187,7 +187,7 @@ export default function WhyNetworked() {
           eyebrow="Why Networked360"
           title={
             <>
-              Less scrolling. <em className="text-gradient italic">More real people.</em>
+              Less scrolling. <em className="text-gradient">More real people.</em>
             </>
           }
           lead="Born from years of sold-out speed-dating evenings in New Jersey and New York, now for every part of life — careers, capital, friendship, love and expert advice."
@@ -271,7 +271,7 @@ export default function WhyNetworked() {
               </svg>
             </div>
             <div>
-              <p className="font-display text-[clamp(3rem,4.4vw,4rem)] leading-none tracking-[-0.04em]">
+              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em]">
                 5–<span data-count="7">7</span>
                 <span className="ml-1 font-sans text-[0.32em] font-medium tracking-normal text-white/80">min</span>
               </p>
@@ -290,7 +290,7 @@ export default function WhyNetworked() {
               <span className="relative grid h-10 w-10 place-items-center rounded-full border-[3px] border-white bg-brand-50 text-[0.75rem] font-semibold text-brand">+5</span>
             </div>
             <div>
-              <p className="font-display text-[clamp(3rem,4.4vw,4rem)] leading-none tracking-[-0.04em] text-ink">
+              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em] text-ink">
                 8–<span data-count="10">10</span>
               </p>
               <p className="mt-2 text-[0.92rem] text-ink-3">people met in one event</p>
@@ -304,7 +304,7 @@ export default function WhyNetworked() {
               <Lock className="h-5 w-5" />
             </span>
             <div className="relative">
-              <p className="font-display text-[clamp(3rem,4.4vw,4rem)] leading-none tracking-[-0.04em]">0</p>
+              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em]">0</p>
               <p className="mt-2 text-[0.92rem] text-white/70">details shared without a mutual yes</p>
             </div>
           </div>
@@ -320,7 +320,7 @@ export default function WhyNetworked() {
               </span>
             </div>
             <div>
-              <p className="font-display text-[clamp(3rem,4.4vw,4rem)] leading-none tracking-[-0.04em] text-ink">
+              <p className="font-display font-extrabold text-[clamp(2.5rem,3.6vw,3.3rem)] leading-none tracking-[-0.04em] text-ink">
                 <span data-count="2">2</span>
                 <span className="ml-2 font-sans text-[0.32em] font-medium tracking-normal text-ink-3">formats</span>
               </p>

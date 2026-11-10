@@ -59,7 +59,7 @@ export default function Stories() {
           eyebrow="Success stories"
           title={
             <>
-              Met in <em className="text-gradient italic">seven minutes.</em>
+              Met in <em className="text-gradient">seven minutes.</em>
             </>
           }
           lead="Hires, co-founders, best friends and second dates — all from one short conversation."
@@ -84,12 +84,12 @@ export default function Stories() {
 
           {/* quote */}
           <div className="relative flex flex-col justify-between gap-8 overflow-hidden rounded-[36px] border border-line bg-white p-7 shadow-soft sm:p-10">
-            <span aria-hidden className="pointer-events-none absolute -top-6 right-6 font-display text-[11rem] leading-none text-brand-100 select-none">”</span>
+            <span aria-hidden className="pointer-events-none absolute -top-6 right-6 font-display font-extrabold text-[11rem] leading-none text-brand-100 select-none">”</span>
             <div data-quote className="relative grid gap-6">
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-[0.76rem] font-semibold text-brand-600">
                 <Quote className="h-3.5 w-3.5 fill-current" /> {s.tag} story
               </span>
-              <blockquote className="font-display text-[clamp(1.55rem,2.4vw,2.25rem)] leading-[1.22] tracking-[-0.02em] text-ink">“{s.quote}”</blockquote>
+              <blockquote className="font-display font-semibold text-[clamp(1.35rem,2.1vw,1.85rem)] leading-[1.32] tracking-[-0.02em] text-ink">“{s.quote}”</blockquote>
               <div className="flex items-center gap-4">
                 <span className="relative h-14 w-14 overflow-hidden rounded-full ring-4 ring-brand-50">
                   <Image src={s.person.img} alt="" fill sizes="56px" className="object-cover" />
@@ -105,7 +105,7 @@ export default function Stories() {
 
             <div className="flex items-center justify-between gap-4 border-t border-line pt-6">
               <div className="flex items-center gap-3">
-                <span className="font-display text-[1.4rem] tabular-nums text-ink">0{i + 1}</span>
+                <span className="font-display font-bold text-[1.4rem] tabular-nums text-ink">0{i + 1}</span>
                 <span className="relative h-[2px] w-24 overflow-hidden rounded-full bg-paper-3">
                   <span data-bar className="absolute inset-0 origin-left bg-brand" />
                 </span>

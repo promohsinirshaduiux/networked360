@@ -103,7 +103,7 @@ export default function MatchStage() {
   );
 
   const centre = (side: 'left' | 'right') => (
-    <div {...{ [`data-${side}`]: '' }} className="relative h-[94%] w-[clamp(84px,calc((100vw-150px)/2),124px)] md:w-[clamp(124px,20vw,210px)]">
+    <div {...{ [`data-${side}`]: '' }} className="relative h-[94%] w-[clamp(64px,calc((100vw-176px)/2),124px)] md:w-[clamp(124px,20vw,210px)]">
       <div data-pair className="relative h-full overflow-hidden rounded-t-full rounded-b-[30px] bg-paper-3 shadow-lift">
         {PAIRS.map((pr, k) => (
           <div key={k} data-face className="absolute inset-0" style={{ opacity: k === 0 ? 1 : 0 }}>
@@ -146,7 +146,7 @@ export default function MatchStage() {
 
         <div data-arch className="relative flex h-full items-end gap-[clamp(10px,1.6vw,22px)]">
           {centre('left')}
-          <div className="relative mb-[22%] grid h-[96px] w-[96px] shrink-0 place-items-center md:h-[112px] md:w-[112px]">
+          <div className="relative mb-[22%] grid h-[84px] w-[84px] shrink-0 place-items-center sm:h-[96px] sm:w-[96px] md:h-[112px] md:w-[112px]">
             <span data-line className="absolute top-1/2 right-full h-[2px] w-[clamp(10px,1.6vw,22px)] origin-right bg-brand" style={{ transform: 'scaleX(0)' }} />
             <span data-line className="absolute top-1/2 left-full h-[2px] w-[clamp(10px,1.6vw,22px)] origin-left bg-brand" style={{ transform: 'scaleX(0)' }} />
             <div data-clock className="absolute inset-0 grid place-items-center rounded-full bg-white shadow-float">

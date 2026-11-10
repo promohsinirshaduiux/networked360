@@ -74,7 +74,7 @@ export default function Contact() {
             eyebrow="Contact us"
             title={
               <>
-                Let’s <em className="text-gradient italic">talk.</em>
+                Let’s <em className="text-gradient">talk.</em>
               </>
             }
             lead="Questions about a room, hosting an event or partnering with us? A real person will get back to you."
@@ -116,7 +116,7 @@ export default function Contact() {
                 <span className="grid h-16 w-16 place-items-center rounded-full bg-brand text-white shadow-brand">
                   <CheckCircle2 className="h-8 w-8" />
                 </span>
-                <p className="font-display text-[2.2rem] leading-tight tracking-[-0.02em] text-ink">Message sent.</p>
+                <p className="font-display font-bold text-[1.9rem] leading-tight tracking-[-0.02em] text-ink">Message sent.</p>
                 <p className="max-w-[36ch] text-ink-3">
                   Thanks, {form.name.split(' ')[0]}. We’ll reply to {form.email} within one business day.
                 </p>
@@ -125,7 +125,7 @@ export default function Contact() {
               <form data-form onSubmit={submit} noValidate className="relative grid gap-4">
                 <div className="mb-2 flex flex-wrap items-end justify-between gap-3">
                   <div>
-                    <p className="font-display text-[1.7rem] leading-tight tracking-[-0.02em] text-ink">Send us a message</p>
+                    <p className="font-display font-bold text-[1.45rem] leading-tight tracking-[-0.02em] text-ink">Send us a message</p>
                     <p className="mt-1 text-[0.92rem] text-ink-3">All fields are required.</p>
                   </div>
                   <span className="inline-flex items-center gap-2 rounded-full bg-mint-50 px-3 py-1.5 text-[0.78rem] font-semibold text-mint">
